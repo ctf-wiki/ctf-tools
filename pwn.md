@@ -16,6 +16,8 @@
   > 2. Browse to main.py and open it
   > 3. That's it!
   >
+  > ​
+  >
   > **Key Bindings**
   >
   > Some of these keybindings can be accessed by right-clicking on the screen in graph view.
