@@ -8,16 +8,16 @@
 
 ## Java
 
-* [JRE 8u111 Windows x86](http://oioe4uzzu.bkt.clouddn.com/environment/java/jre-8u111-windows-i586.exe)
-* [JRE 8u111 Windows x64](http://oioe4uzzu.bkt.clouddn.com/environment/java/jre-8u111-windows-x64.exe)
+* [JRE 8u111 Windows x86](http://down.40huo.cn/environment/java/jre-8u111-windows-i586.exe)
+* [JRE 8u111 Windows x64](http://down.40huo.cn/environment/java/jre-8u111-windows-x64.exe)
 * [JRE 8u111 Mac OS X](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
-* [JDK 8u101 Windows x64](http://oioe4uzzu.bkt.clouddn.com/environment/java/jdk-8u101-windows-x64.exe)
+* [JDK 8u101 Windows x64](http://down.40huo.cn/environment/java/jdk-8u101-windows-x64.exe)
 
 ## Python
 
-* [Python 2.7.12 Windows x86](http://oioe4uzzu.bkt.clouddn.com/environment/python/python-2.7.12.msi)
+* [Python 2.7.12 Windows x86](http://down.40huo.cn/environment/python/python-2.7.12.msi)
 
-* [Python 3.5.2 Windows x86](http://oioe4uzzu.bkt.clouddn.com/environment/python/python-3.5.2.exe)
+* [Python 3.5.2 Windows x86](http://down.40huo.cn/environment/python/python-3.5.2.exe)
 
 * pip 豆瓣源设置
 

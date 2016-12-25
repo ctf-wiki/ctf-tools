@@ -2,7 +2,7 @@
 
 ## 反汇编
 
-- [IDA Pro 6.8 Green](http://oioe4uzzu.bkt.clouddn.com/reverse/IDA_Pro_v6.8_and_Hex-Rays_Decompiler_%28ARM,x64,x86%29_Green.rar)
+- [IDA Pro 6.8 Green](http://down.40huo.cn/reverse/IDA_Pro_v6.8_and_Hex-Rays_Decompiler_%28ARM,x64,x86%29_Green.rar)
 
 ## Patch
 
