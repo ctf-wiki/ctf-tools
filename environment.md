@@ -31,4 +31,23 @@
   format=columns
   ```
 
-  ​
+
+## Offline Docs
+
+当你处于没有外网的环境时，自己留在本地的资料就显得尤为重要。
+
+* [乌云漏洞知识库镜像](https://github.com/hanc00l/wooyun_public)
+
+  * [百度网盘  提取码 5ik7](http://pan.baidu.com/s/1kVtY2rX)
+
+* [Zeal](https://zealdocs.org)
+
+  > Zeal is an offline documentation browser for software developers.
+
+  这东西有个缺点。。。下载的时候很慢，挂了代理好像稍微好点。。。
+
+  * [Zeal portable 0.3.1 Windows x86](http://down.40huo.cn/environment/offline/zeal-portable-0.3.1-windows-x86.7z)
+
+  * [自己打的 docset 压缩包 7z](http://down.40huo.cn/environment/offline/docsets.7z)
+
+    包括 Bash、C、C++、CSS、Django、Docker、ElasticSearch、Flask、Go、HTML、JavaScript、Java SE 8、Laravel、MySQL、Nginx、PHP、Python 2、Python 3、Vim、WordPress。
