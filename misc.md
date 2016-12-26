@@ -28,7 +28,9 @@
 
 * [Outguess amd64 deb](http://down.40huo.cn/misc/outguess_0.2-7_amd64.deb)
 
-* [PNGCheck](http://down.40huo.cn/misc/pngcheck-2.3.0-win32.zip)
+* [PNGCheck 2.3.0 win32](http://down.40huo.cn/misc/pngcheck-2.3.0-win32.zip)
+
+* [JPHS win32](http://down.40huo.cn/misc/jphs_05.zip)
 
 ## 压缩包
 
