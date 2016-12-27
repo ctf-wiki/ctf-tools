@@ -63,6 +63,8 @@
 
 * [猪猪侠字典打包](http://down.40huo.cn/wordlist/scanlist.tar.gz)
 
+* [Github 上某不明字典](http://down.40huo.cn/wordlist/wordlist.txt.gz)
+
 ## 源码泄露
 
 * [Seay - SVN 源码泄露利用工具](http://down.40huo.cn/web/Seay-Svn%E6%BA%90%E4%BB%A3%E7%A0%81%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E5%B7%A5%E5%85%B72.0.zip)
