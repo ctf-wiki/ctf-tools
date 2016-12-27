@@ -26,6 +26,8 @@
 
   i – 检测图像中的信息是否是用 invisible secrets 嵌入的。
 
+* [Steghide 0.5.1 win32](http://down.40huo.cn/misc/steghide-0.5.1-win32.zip)
+
 * [Outguess amd64 deb](http://down.40huo.cn/misc/outguess_0.2-7_amd64.deb)
 
 * [PNGCheck 2.3.0 win32](http://down.40huo.cn/misc/pngcheck-2.3.0-win32.zip)
