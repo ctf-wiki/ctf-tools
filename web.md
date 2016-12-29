@@ -96,3 +96,19 @@
   `ip` : 起始调查 ip 或 ip 列表，以逗号分割
 
   `url` : 起始调查 cgi 链接或链接列表，以逗号分割
+
+* [ngxtop](https://github.com/lebinh/ngxtop)
+
+  > real-time metrics for nginx server (and others)
+
+  安装：`pip install ngxtop`
+
+  示例：
+
+  ```bash
+  ngxtop top remote_addr	# View top source IPs of clients
+  ngxtop -i 'status >= 400' print request status http_referer	# List 4xx or 5xx responses together with HTTP referer
+  tail -f /var/log/apache2/access.log | ngxtop -f common	# Parse apache log from remote server with common format
+  ```
+
+  ​
