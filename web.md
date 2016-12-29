@@ -78,3 +78,21 @@
   > ```
 
   [截至2016年12月27日 master 分支打包](http://down.40huo.cn/web/GitHack-master.zip)
+
+## 日志分析
+
+* [LogForensics](https://github.com/xti9er/LogForensics)
+
+  日志分析 Perl 脚本，使用方法：
+
+  ```bash
+  Perl LogForensics.pl -file logfile -websvr (nginx|httpd) [-ip ip(ip,ip,ip)|-url url(url,url,url)]
+  ```
+
+  `file` : 日志文件路径 
+
+  `websvr` : 日志类型
+
+  `ip` : 起始调查 ip 或 ip 列表，以逗号分割
+
+  `url` : 起始调查 cgi 链接或链接列表，以逗号分割
