@@ -26,6 +26,8 @@
 
   移位密码破解。
 
+* [PYG 密码学综合工具](http://down.40huo.cn/crypto/pyg%E5%AF%86%E7%A0%81%E5%AD%A6%E7%BB%BC%E5%90%88%E5%B7%A5%E5%85%B7.zip)
+
 ## RSA
 
 * [yafu 大数分解](http://down.40huo.cn/crypto/yafu-1.34.zip)
