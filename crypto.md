@@ -34,6 +34,33 @@
 * [factordb 在线大数分解](http://factordb.com/)
 * [RSATool](http://down.40huo.cn/crypto/RSATool2v17.rar_87752.rar)
 
+## Hash
+
+* [CRC32 碰撞脚本](https://github.com/theonlypwner/crc32/blob/master/crc32.py)
+
+  ```shell
+  crc32.py -h
+  usage: crc32.py [-h] action ...
+
+  Reverse, undo, and calculate CRC32 checksums
+
+  positional arguments:
+    action
+      flip      flip the bits to convert normal(msbit-first) polynomials to
+                reversed (lsbit-first) and vice versa
+      reciprocal
+                find the reciprocal (Koopman notation) of a reversed (lsbit-
+                first) polynomial and vice versa
+      table     generate a lookup table for a polynomial
+      reverse   find a patch that causes the CRC32 checksum to become a desired
+                value
+      undo      rewind a CRC32 checksum
+      calc      calculate the CRC32 checksum
+
+  optional arguments:
+    -h, --help  show this help message and exit
+  ```
+
 ## 其他
 
 - [Cisco 密码在线破解](http://www.ifm.net.nz/cookbooks/passwordcracker.html)
