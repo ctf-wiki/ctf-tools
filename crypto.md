@@ -31,8 +31,19 @@
 ## RSA
 
 * [yafu 大数分解](http://down.40huo.cn/crypto/yafu-1.34.zip)
+
 * [factordb 在线大数分解](http://factordb.com/)
+
 * [RSATool](http://down.40huo.cn/crypto/RSATool2v17.rar_87752.rar)
+
+* [wiener-attack](https://github.com/pablocelayes/rsa-wiener-attack)
+
+* [rsatool](https://github.com/ius/rsatool)
+
+  ```bash
+  python rsatool.py -f PEM -o key.pem -n 13826123222358393307 -d 9793706120266356337
+  python rsatool.py -f DER -o key.der -p 4184799299 -q 3303891593
+  ```
 
 ## Hash
 
