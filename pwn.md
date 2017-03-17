@@ -2,7 +2,7 @@
 
 ## 反汇编
 
-- [IDA Pro 6.8 Green](http://down.52pojie.cn/Tools/Disassemblers/IDA_Pro_v6.8_and_Hex-Rays_Decompiler_(ARM,x64,x86)_Green.rar)
+- [IDA Pro 6.8 Green](http://down.52pojie.cn/Tools/Disassemblers/IDA_Pro_v6.8_and_Hex-Rays_Decompiler_%28ARM%2Cx64%2Cx86%29_Green.rar)
 
 ## 调试
 
