@@ -8,16 +8,12 @@
 
 ## Java
 
-* [JRE 8u111 Windows x86](http://down.40huo.cn/environment/java/jre-8u111-windows-i586.exe)
-* [JRE 8u111 Windows x64](http://down.40huo.cn/environment/java/jre-8u111-windows-x64.exe)
-* [JRE 8u111 Mac OS X](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
-* [JDK 8u101 Windows x64](http://down.40huo.cn/environment/java/jdk-8u101-windows-x64.exe)
+* [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
+* [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 ## Python
 
-* [Python 2.7.12 Windows x86](http://down.40huo.cn/environment/python/python-2.7.12.msi)
-
-* [Python 3.5.2 Windows x86](http://down.40huo.cn/environment/python/python-3.5.2.exe)
+* [Python](https://www.python.org/)
 
 * pip 豆瓣源设置
 
@@ -46,8 +42,8 @@
 
   这东西有个缺点。。。下载的时候很慢，挂了代理好像稍微好点。。。
 
-  * [Zeal portable 0.3.1 Windows x86](http://down.40huo.cn/environment/offline/zeal-portable-0.3.1-windows-x86.7z)
+  * [Zeal portable](https://zealdocs.org/download.html)
 
-  * [自己打的 docset 压缩包 7z](http://down.40huo.cn/environment/offline/docsets.7z)
+  * [自己打的 docset 压缩包 7z](http://pan.baidu.com/s/1slrWutf)
 
     包括 Bash、C、C++、CSS、Django、Docker、ElasticSearch、Flask、Go、HTML、JavaScript、Java SE 8、Laravel、MySQL、Nginx、PHP、Python 2、Python 3、Vim、WordPress。

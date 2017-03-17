@@ -61,7 +61,7 @@
 
   [截至2016年12月27日 master 分支打包](http://down.40huo.cn/web/weakfilescan-master.zip)
 
-* [猪猪侠字典打包](http://down.40huo.cn/wordlist/scanlist.tar.gz)
+* [猪猪侠字典打包](http://pan.baidu.com/s/1geBDwGz)
 
 * [Github 上某不明字典](http://down.40huo.cn/wordlist/wordlist.txt.gz)
 

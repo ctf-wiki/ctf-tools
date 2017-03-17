@@ -22,5 +22,5 @@
 
 - [AndroidResEdit](http://down.40huo.cn/android/AndroidResEdit.rar)
 - [JD - GUI](http://down.40huo.cn/android/jd-gui-windows-1.4.0.zip)
-- [Android Killer](http://down.40huo.cn/android/AndroidKiller_v1.3.1.zip)
-- [JEB - 2.2.7](http://down.40huo.cn/android/jeb-2.2.7.201608151620_crack_qtfreet00.zip)
+- [Android Killer](http://down.52pojie.cn/Tools/Android_Tools/AndroidKiller_v1.3.1.zip)
+- [JEB - 2.2.7](http://down.52pojie.cn/Tools/Android_Tools/jeb-2.2.7.201608151620_crack_qtfreet00.zip)
