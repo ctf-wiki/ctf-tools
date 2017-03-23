@@ -18,5 +18,6 @@
 
 ## Links
 
-* [学会 Google](https://www.google.com)
+* [40huo's](https://www.40huo.cn)
+* [Jarvis OJ](https://www.jarvisoj.com/)
 * [同性交友平台](https://github.com)
