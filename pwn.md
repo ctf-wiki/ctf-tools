@@ -16,7 +16,7 @@
   > echo "DONE! debug your program with gdb and enjoy"
   > ```
 
-  [截至2016年12月27日 master 分支打包](http://down.40huo.cn/pwn/peda-master.zip)
+  [截至 2016 年 12 月 27 日 master 分支打包](http://down.40huo.cn/pwn/peda-master.zip)
 
 ## Patch
 
@@ -49,4 +49,4 @@
   > - `Ctrl-Alt-F` Make jump unconditional
   > - `Ctrl-Alt-N` Neuter the binary (remove calls to fork, setuid, setgid, getpwnam, setgroups, and chdir)
 
-  [截至2016年12月27日 master 分支打包](http://down.40huo.cn/pwn/Fentanyl-master.zip)
+  [截至 2016 年 12 月 27 日 master 分支打包](http://down.40huo.cn/pwn/Fentanyl-master.zip)

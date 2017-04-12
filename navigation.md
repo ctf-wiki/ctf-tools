@@ -1,8 +1,8 @@
 # 1897 军火库 
 
-[工具合集](collections.md)
+[Collections](collections.md)
 
-[环境搭建](environment.md)
+[Environment](environment.md)
 
 [MISC](misc.md)
 
@@ -13,6 +13,8 @@
 [PWN](pwn.md)
 
 [Web](web.md)
+
+[Papers](papers.md)
 
 [gimmick:themechooser](选择主题)
 

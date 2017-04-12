@@ -35,7 +35,7 @@
   >
   > You can find a sample run [here](https://asciinema.org/a/46601). To get an overview of sqlmap capabilities, list of supported features and description of all options and switches, along with examples, you are advised to consult the [user's manual](https://github.com/sqlmapproject/sqlmap/wiki).
 
-  [截至2016年12月27日 master 分支打包](http://down.40huo.cn/web/weakfilescan-master.zip)
+  [截至 2016 年 12 月 27 日 master 分支打包](http://down.40huo.cn/web/weakfilescan-master.zip)
 
 ## 抓包
 
@@ -59,7 +59,7 @@
 
   dirfuzz 进阶版。
 
-  [截至2016年12月27日 master 分支打包](http://down.40huo.cn/web/weakfilescan-master.zip)
+  [截至 2016 年 12 月 27 日 master 分支打包](http://down.40huo.cn/web/weakfilescan-master.zip)
 
 * [猪猪侠字典打包](http://pan.baidu.com/s/1geBDwGz)
 
@@ -77,7 +77,7 @@
   > GitHack.py http://www.openssl.org/.git/
   > ```
 
-  [截至2016年12月27日 master 分支打包](http://down.40huo.cn/web/GitHack-master.zip)
+  [截至 2016 年 12 月 27 日 master 分支打包](http://down.40huo.cn/web/GitHack-master.zip)
 
 ## 日志分析
 
@@ -89,13 +89,13 @@
   Perl LogForensics.pl -file logfile -websvr (nginx|httpd) [-ip ip(ip,ip,ip)|-url url(url,url,url)]
   ```
 
-  `file` : 日志文件路径 
+  `file` ：日志文件路径 
 
-  `websvr` : 日志类型
+  `websvr` ：日志类型
 
-  `ip` : 起始调查 ip 或 ip 列表，以逗号分割
+  `ip` ：起始调查 ip 或 ip 列表，以逗号分割
 
-  `url` : 起始调查 cgi 链接或链接列表，以逗号分割
+  `url` ：起始调查 cgi 链接或链接列表，以逗号分割
 
 * [ngxtop](https://github.com/lebinh/ngxtop)
 
@@ -106,9 +106,9 @@
   示例：
 
   ```bash
-  ngxtop top remote_addr	# View top source IPs of clients
-  ngxtop -i 'status >= 400' print request status http_referer	# List 4xx or 5xx responses together with HTTP referer
-  tail -f /var/log/apache2/access.log | ngxtop -f common	# Parse apache log from remote server with common format
+  ngxtop top remote_addr    # View top source IPs of clients
+  ngxtop -i 'status >= 400' print request status http_referer    # List 4xx or 5xx responses together with HTTP referer
+  tail -f /var/log/apache2/access.log | ngxtop -f common    # Parse apache log from remote server with common format
   ```
 
 ## 内网
@@ -117,25 +117,25 @@
 
   跳板机管理工具。[下载](http://pan.baidu.com/s/1pLUB7ar)
 
-  > 1. 以服务模式启动一个agent服务。
+  > 1. 以服务模式启动一个 agent 服务。
   >
   >    ```bash
   >    $ ./agent -l p 8888
   >    ```
   >
-  > 2. 令管理端连接到agent并对agent进行管理。
+  > 2. 令管理端连接到 agent 并对 agent 进行管理。
   >
   >    ```bash
   >    $ ./admin -c 127.0.0.1 -p 8888
   >    ```
   >
-  > 3. 此时，admin端会得到一个内置的shell, 输入help指令可以得到帮助信息。
+  > 3. 此时，admin 端会得到一个内置的 shell，输入 help 指令可以得到帮助信息。
   >
   >    ```bash
   >    >> help
   >    ```
   >
-  > 4. 通过show指令可以得到当前agent的拓扑情况。
+  > 4. 通过 show 指令可以得到当前 agent 的拓扑情况。
   >
   >    ```bash
   >    >> show 
@@ -146,13 +146,13 @@
   >      M为MacOS系统的简写，Linux为L，Windows简写为W。
   >    ```
   >
-  > 5. 将新agent加入当前拓扑。
+  > 5. 将新 agent 加入当前拓扑。
   >
   >    ```bash
   >    ./agent -c 127.0.0.1 -p 8888
   >    ```
   >
-  > 6. 此时show指令将得到如下效果。
+  > 6. 此时 show 指令将得到如下效果。
   >
   >    ```bash
   >    0M
@@ -162,7 +162,7 @@
   >
   >    ```
   >
-  > 7. 在2节点开启socks代理，并绑定在本地端口
+  > 7. 在 2 节点开启 socks 代理，并绑定在本地端口
   >
   >    ```bash
   >    >> goto 2
@@ -171,7 +171,7 @@
   >       此时，本地1080 端口会启动个监听服务，而服务提供者为2号节点。
   >    ```
   >
-  > 8. 在1号节点开启一个shell并绑定到本地端口
+  > 8. 在 1 号节点开启一个 shell 并绑定到本地端口
   >
   >    ```bash
   >    >> goto 1
