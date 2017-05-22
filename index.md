@@ -20,4 +20,5 @@
 
 * [40huo's](https://www.40huo.cn)
 * [Jarvis OJ](https://www.jarvisoj.com/)
+* [古斯塔斯隧道](https://tunnel.guristas.me)
 * [同性交友平台](https://github.com)
