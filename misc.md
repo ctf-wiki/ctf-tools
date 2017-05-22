@@ -34,6 +34,8 @@
 
 * [JPHS win32](http://down.40huo.cn/misc/jphs_05.zip)
 
+* [OurSecret](http://down.40huo.cn/misc/oursecret.zip)
+
 ## 压缩包
 
 * [Ziperello](http://down.40huo.cn/misc/Ziperello.zip)

@@ -4,7 +4,7 @@
 
 - [习科兵器库版菜刀](https://attach.blackbap.org/down/wzaq/caidao.rar)
 
-- [官网新版菜刀](http://down.40huo.cn/caidao-20160622-www.maicaidao.com.7z)
+- [官网新版菜刀](http://down.40huo.cn/web/caidao-20160622-www.maicaidao.com.7z)
 
   解压密码 www.maicaidao.com
 
