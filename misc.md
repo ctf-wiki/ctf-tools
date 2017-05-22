@@ -36,9 +36,13 @@
 
 ## 压缩包
 
-* [Ziperello](http://down.40huo.cn/misc/HA_Ziperello.rar)
+* [Ziperello](http://down.40huo.cn/misc/Ziperello.zip)
 
   zip 压缩包密码爆破。
+
+* [Advanced Rar Password Recovery](http://down.40huo.cn/misc/AdvancedRARPassword.zip)
+
+* [Advanced Zip Password Recovery](http://down.40huo.cn/misc/AZPR_4.0.zip)
 
 ## 无线密码
 
