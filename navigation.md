@@ -4,18 +4,16 @@
 
 [Environment](environment.md)
 
-[MISC](misc.md)
+[Misc](misc.md)
 
 [Crypto](crypto.md)
 
 [Reverse](reverse.md)
 
-[PWN](pwn.md)
+[Pwn](pwn.md)
 
 [Web](web.md)
 
 [Papers](papers.md)
 
 [gimmick:themechooser](选择主题)
-
-[gimmick:theme](flatly)
