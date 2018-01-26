@@ -1,0 +1,269 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "CTF Tools\n\u00b6\n\n\nCTF \u519b\u706b\u5e93\uff0c\u6536\u96c6 CTF \u7ade\u8d5b\u76f8\u5173\u7684\u5de5\u5177\u3001\u811a\u672c\u548c\u5b89\u5168\u9886\u57df\u7684\u4f1a\u8bae PPT \u7b49\u3002\n\n\n\u7531 \nCTF Wiki\n \u56e2\u961f\u7ef4\u62a4\u3002\n\n\n\n\nWarning\n\n\n\u672c\u7ad9\u6240\u6709\u5de5\u5177\u6536\u96c6\u81ea\u7f51\u7edc\uff0c\u8bf7\u81ea\u884c\u67e5\u6bd2\u67e5\u540e\u95e8\u3002",
+            "title": "\u9996\u9875"
+        },
+        {
+            "location": "/#ctf-tools",
+            "text": "CTF \u519b\u706b\u5e93\uff0c\u6536\u96c6 CTF \u7ade\u8d5b\u76f8\u5173\u7684\u5de5\u5177\u3001\u811a\u672c\u548c\u5b89\u5168\u9886\u57df\u7684\u4f1a\u8bae PPT \u7b49\u3002  \u7531  CTF Wiki  \u56e2\u961f\u7ef4\u62a4\u3002   Warning  \u672c\u7ad9\u6240\u6709\u5de5\u5177\u6536\u96c6\u81ea\u7f51\u7edc\uff0c\u8bf7\u81ea\u884c\u67e5\u6bd2\u67e5\u540e\u95e8\u3002",
+            "title": "CTF Tools"
+        },
+        {
+            "location": "/collections/",
+            "text": "\u5de5\u5177\u5408\u96c6\n\u00b6\n\n\n\n\n\n\n\n\n\u540d\u79f0\n\n\n\u7b80\u4ecb\n\n\n\u767e\u5ea6\u7f51\u76d8\n\n\n\u63d0\u53d6\u7801\n\n\n\n\n\n\n\n\n\n\nCTF \u5de5\u5177\u5408\u96c6\n\n\n\u7cbe\u7075\u8868\u54e5\u6574\u7406\n\n\n\u4e0b\u8f7d\n\n\n1t65\n\n\n\n\n\n\n\u5206\u7c7b\u8be6\u5c3d\u7684\u5de5\u5177\u5408\u96c6\n\n\n\u4f5a\u540d\n\n\n\u4e0b\u8f7d\n\n\n7tt4\n\n\n\n\n\n\n\n\n\n\n\u8d44\u6e90\u6765\u81ea \nhttp://down.ctftools.com",
+            "title": "Collections \u5de5\u5177\u5408\u96c6"
+        },
+        {
+            "location": "/collections/#_1",
+            "text": "\u540d\u79f0  \u7b80\u4ecb  \u767e\u5ea6\u7f51\u76d8  \u63d0\u53d6\u7801      CTF \u5de5\u5177\u5408\u96c6  \u7cbe\u7075\u8868\u54e5\u6574\u7406  \u4e0b\u8f7d  1t65    \u5206\u7c7b\u8be6\u5c3d\u7684\u5de5\u5177\u5408\u96c6  \u4f5a\u540d  \u4e0b\u8f7d  7tt4      \u8d44\u6e90\u6765\u81ea  http://down.ctftools.com",
+            "title": "\u5de5\u5177\u5408\u96c6"
+        },
+        {
+            "location": "/environment/",
+            "text": "\u73af\u5883\u642d\u5efa\n\u00b6\n\n\nKali Linux\n\u00b6\n\n\n\n\n\u5b98\u7f51\n\n\n\u5b89\u88c5\u955c\u50cf\u4e0b\u8f7d\uff08\u4e2d\u79d1\u5927\uff09\n\n\n\u865a\u62df\u673a\u955c\u50cf\u4e0b\u8f7d\uff08\u5b98\u7f51\uff09\n\n\n\n\nJava\n\u00b6\n\n\n\n\nJRE\n\n\nJDK\n\n\n\n\nPython\n\u00b6\n\n\n\n\n\n\nPython\n\n\n\n\n\n\npip \u8c46\u74e3\u6e90\u8bbe\u7f6e\n\n\n\u5728 \n~/.pip/\n \u76ee\u5f55\u4e0b\u65b0\u5efa \npip.ini\n\uff08Windows\uff09\u6216 \npip.conf\n\uff08Linux\uff09\u6587\u4ef6\uff0c\u5185\u5bb9\u5982\u4e0b\uff1a\n\n\n[global]\n\n\nindex-url\n \n=\n \nhttp://pypi.douban.com/simple\n\n\ntrusted-host\n \n=\n \npypi.douban.com\n\n\n[list]\n\n\nformat\n=\ncolumns\n\n\n\n\n\n\n\n\n\nOffline Docs\n\u00b6\n\n\n\u5f53\u4f60\u5904\u4e8e\u6ca1\u6709\u5916\u7f51\u7684\u73af\u5883\u65f6\uff0c\u81ea\u5df1\u7559\u5728\u672c\u5730\u7684\u8d44\u6599\u5c31\u663e\u5f97\u5c24\u4e3a\u91cd\u8981\u3002\n\n\n\n\n\n\n\u4e4c\u4e91\u6f0f\u6d1e\u77e5\u8bc6\u5e93\u955c\u50cf\n\n\n\u767e\u5ea6\u7f51\u76d8  \u63d0\u53d6\u7801 5ik7\n\n\n\n\n\n\nZeal\n\n\n\n\nZeal is an offline documentation browser for software developers.\n\n\n\n\n\u8fd9\u4e1c\u897f\u6709\u4e2a\u7f3a\u70b9\u3002\u3002\u3002\u4e0b\u8f7d\u7684\u65f6\u5019\u5f88\u6162\uff0c\u6302\u4e86\u4ee3\u7406\u597d\u50cf\u7a0d\u5fae\u597d\u70b9\u3002\u3002\u3002\n\n\n\n\n\n\nZeal portable\n\n\n\n\n\n\n\u81ea\u5df1\u6253\u7684 docset \u538b\u7f29\u5305\n\n\n\u5305\u62ec Bash\u3001C\u3001C++\u3001CSS\u3001Django\u3001Docker\u3001ElasticSearch\u3001Flask\u3001Go\u3001HTML\u3001JavaScript\u3001Java SE 8\u3001Laravel\u3001MySQL\u3001Nginx\u3001PHP\u3001Python 2\u3001Python 3\u3001Vim\u3001WordPress\u3002\n\n\n\n\n\n\n\n\n\n\n\u79d1\u5b66\u4e0a\u7f51\n\u00b6\n\n\n\u7531\u4e8e\u4f17\u6240\u5468\u77e5\u7684\u539f\u56e0\uff0c",
+            "title": "Environment \u73af\u5883\u914d\u7f6e"
+        },
+        {
+            "location": "/environment/#_1",
+            "text": "",
+            "title": "\u73af\u5883\u642d\u5efa"
+        },
+        {
+            "location": "/environment/#kali-linux",
+            "text": "\u5b98\u7f51  \u5b89\u88c5\u955c\u50cf\u4e0b\u8f7d\uff08\u4e2d\u79d1\u5927\uff09  \u865a\u62df\u673a\u955c\u50cf\u4e0b\u8f7d\uff08\u5b98\u7f51\uff09",
+            "title": "Kali Linux"
+        },
+        {
+            "location": "/environment/#java",
+            "text": "JRE  JDK",
+            "title": "Java"
+        },
+        {
+            "location": "/environment/#python",
+            "text": "Python    pip \u8c46\u74e3\u6e90\u8bbe\u7f6e  \u5728  ~/.pip/  \u76ee\u5f55\u4e0b\u65b0\u5efa  pip.ini \uff08Windows\uff09\u6216  pip.conf \uff08Linux\uff09\u6587\u4ef6\uff0c\u5185\u5bb9\u5982\u4e0b\uff1a  [global]  index-url   =   http://pypi.douban.com/simple  trusted-host   =   pypi.douban.com  [list]  format = columns",
+            "title": "Python"
+        },
+        {
+            "location": "/environment/#offline-docs",
+            "text": "\u5f53\u4f60\u5904\u4e8e\u6ca1\u6709\u5916\u7f51\u7684\u73af\u5883\u65f6\uff0c\u81ea\u5df1\u7559\u5728\u672c\u5730\u7684\u8d44\u6599\u5c31\u663e\u5f97\u5c24\u4e3a\u91cd\u8981\u3002    \u4e4c\u4e91\u6f0f\u6d1e\u77e5\u8bc6\u5e93\u955c\u50cf  \u767e\u5ea6\u7f51\u76d8  \u63d0\u53d6\u7801 5ik7    Zeal   Zeal is an offline documentation browser for software developers.   \u8fd9\u4e1c\u897f\u6709\u4e2a\u7f3a\u70b9\u3002\u3002\u3002\u4e0b\u8f7d\u7684\u65f6\u5019\u5f88\u6162\uff0c\u6302\u4e86\u4ee3\u7406\u597d\u50cf\u7a0d\u5fae\u597d\u70b9\u3002\u3002\u3002    Zeal portable    \u81ea\u5df1\u6253\u7684 docset \u538b\u7f29\u5305  \u5305\u62ec Bash\u3001C\u3001C++\u3001CSS\u3001Django\u3001Docker\u3001ElasticSearch\u3001Flask\u3001Go\u3001HTML\u3001JavaScript\u3001Java SE 8\u3001Laravel\u3001MySQL\u3001Nginx\u3001PHP\u3001Python 2\u3001Python 3\u3001Vim\u3001WordPress\u3002",
+            "title": "Offline Docs"
+        },
+        {
+            "location": "/environment/#_2",
+            "text": "\u7531\u4e8e\u4f17\u6240\u5468\u77e5\u7684\u539f\u56e0\uff0c",
+            "title": "\u79d1\u5b66\u4e0a\u7f51"
+        },
+        {
+            "location": "/misc/",
+            "text": "MISC\n\u00b6\n\n\n\u56fe\u7247\u9690\u5199\n\u00b6\n\n\n\n\n\n\nStegsolve\n\n\n\n\n\n\nStegdetect amd64 deb\n\n\nStegdetect \u7684\u4e3b\u8981\u9009\u9879\u5982\u4e0b\uff1a\n\n\nq \u2013 \u4ec5\u663e\u793a\u53ef\u80fd\u5305\u542b\u9690\u85cf\u5185\u5bb9\u7684\u56fe\u50cf\n\n\nn \u2013 \u542f\u7528\u68c0\u67e5 JPEG \u6587\u4ef6\u5934\u529f\u80fd\uff0c\u4ee5\u964d\u4f4e\u8bef\u62a5\u7387\u3002\u5982\u679c\u542f\u7528\uff0c\u6240\u6709\u5e26\u6709\u6279\u6ce8\u533a\u57df\u7684\u6587\u4ef6\u5c06\u88ab\u89c6\u4e3a\u6ca1\u6709\u88ab\u5d4c\u5165\u4fe1\u606f\u3002\u5982\u679c JPEG \u6587\u4ef6\u7684 JFIF \u6807\u8bc6\u7b26\u4e2d\u7684\u7248\u672c\u53f7\u4e0d\u662f 1.1\uff0c\u5219\u7981\u7528 OutGuess \u68c0\u6d4b\u3002\n\n\ns \u2013 \u4fee\u6539\u68c0\u6d4b\u7b97\u6cd5\u7684\u654f\u611f\u5ea6\uff0c\u8be5\u503c\u7684\u9ed8\u8ba4\u503c\u4e3a 1\u3002\u68c0\u6d4b\u7ed3\u679c\u7684\u5339\u914d\u5ea6\u4e0e\u68c0\u6d4b\u7b97\u6cd5\u7684\u654f\u611f\u5ea6\u6210\u6b63\u6bd4\uff0c\u7b97\u6cd5\u654f\u611f\u5ea6\u7684\u503c\u8d8a\u5927\uff0c\u68c0\u6d4b\u51fa\u7684\u53ef\u7591\u6587\u4ef6\u5305\u542b\u654f\u611f\u4fe1\u606f\u7684\u53ef\u80fd\u6027\u8d8a\u5927\u3002\n\n\nd \u2013 \u6253\u5370\u5e26\u884c\u53f7\u7684\u8c03\u8bd5\u4fe1\u606f\u3002\n\n\nt \u2013 \u8bbe\u7f6e\u8981\u68c0\u6d4b\u54ea\u4e9b\u9690\u5199\u5de5\u5177\uff08\u9ed8\u8ba4\u68c0\u6d4b jopi\uff09\uff0c\u53ef\u8bbe\u7f6e\u7684\u9009\u9879\u5982\u4e0b\uff1a\n\n\nj \u2013 \u68c0\u6d4b\u56fe\u50cf\u4e2d\u7684\u4fe1\u606f\u662f\u5426\u662f\u7528 jsteg \u5d4c\u5165\u7684\u3002\n\n\no \u2013 \u68c0\u6d4b\u56fe\u50cf\u4e2d\u7684\u4fe1\u606f\u662f\u5426\u662f\u7528 outguess \u5d4c\u5165\u7684\u3002\n\n\np \u2013 \u68c0\u6d4b\u56fe\u50cf\u4e2d\u7684\u4fe1\u606f\u662f\u5426\u662f\u7528 jphide \u5d4c\u5165\u7684\u3002\n\n\ni \u2013 \u68c0\u6d4b\u56fe\u50cf\u4e2d\u7684\u4fe1\u606f\u662f\u5426\u662f\u7528 invisible secrets \u5d4c\u5165\u7684\u3002\n\n\n\n\n\n\nSteghide 0.5.1 win32\n\n\n\n\n\n\nOutguess amd64 deb\n\n\n\n\n\n\nPNGCheck 2.3.0 win32\n\n\n\n\n\n\nJPHS win32\n\n\n\n\n\n\nOurSecret\n\n\n\n\n\n\n\u538b\u7f29\u5305\n\u00b6\n\n\n\n\n\n\nZiperello\n\n\nzip \u538b\u7f29\u5305\u5bc6\u7801\u7206\u7834\u3002\n\n\n\n\n\n\nAdvanced Rar Password Recovery\n\n\n\n\n\n\nAdvanced Zip Password Recovery\n\n\n\n\n\n\n\u65e0\u7ebf\u5bc6\u7801\n\u00b6\n\n\n\n\nElcomsoft Wireless Security Auditor\n\n\n\n\n\u7f16\u8f91\u5668\n\u00b6\n\n\n\n\n010 Editor Windows x64\n\n\n\n\nNTFS \u6587\u4ef6\u6d41\n\u00b6\n\n\n\n\nAlternate Stream View\n\n\n\n\n\u97f3\u9891\u9690\u5199\n\u00b6\n\n\n\n\nAudacity\n\n\n\u5728\u7ebf\u62e8\u53f7\u97f3\u8bc6\u522b\n\n\n\n\n\u53d6\u8bc1\n\u00b6\n\n\n\n\nElcomsoft Forensic Disk Decryptor\n\n\n\u7834\u89e3\u5de5\u5177\n\n\n\n\n\n\n\n\n\u6761\u5f62\u7801\u3001\u4e8c\u7ef4\u7801\n\u00b6\n\n\n\n\n\u6761\u5f62\u7801\u3001\u4e8c\u7ef4\u7801\u5728\u7ebf\u8bc6\u522b\n\n\n\n\nGIF\n\u00b6\n\n\n\n\nGIF \u5728\u7ebf\u5206\u89e3",
+            "title": "Misc \u6742\u9879"
+        },
+        {
+            "location": "/misc/#misc",
+            "text": "",
+            "title": "MISC"
+        },
+        {
+            "location": "/misc/#_1",
+            "text": "Stegsolve    Stegdetect amd64 deb  Stegdetect \u7684\u4e3b\u8981\u9009\u9879\u5982\u4e0b\uff1a  q \u2013 \u4ec5\u663e\u793a\u53ef\u80fd\u5305\u542b\u9690\u85cf\u5185\u5bb9\u7684\u56fe\u50cf  n \u2013 \u542f\u7528\u68c0\u67e5 JPEG \u6587\u4ef6\u5934\u529f\u80fd\uff0c\u4ee5\u964d\u4f4e\u8bef\u62a5\u7387\u3002\u5982\u679c\u542f\u7528\uff0c\u6240\u6709\u5e26\u6709\u6279\u6ce8\u533a\u57df\u7684\u6587\u4ef6\u5c06\u88ab\u89c6\u4e3a\u6ca1\u6709\u88ab\u5d4c\u5165\u4fe1\u606f\u3002\u5982\u679c JPEG \u6587\u4ef6\u7684 JFIF \u6807\u8bc6\u7b26\u4e2d\u7684\u7248\u672c\u53f7\u4e0d\u662f 1.1\uff0c\u5219\u7981\u7528 OutGuess \u68c0\u6d4b\u3002  s \u2013 \u4fee\u6539\u68c0\u6d4b\u7b97\u6cd5\u7684\u654f\u611f\u5ea6\uff0c\u8be5\u503c\u7684\u9ed8\u8ba4\u503c\u4e3a 1\u3002\u68c0\u6d4b\u7ed3\u679c\u7684\u5339\u914d\u5ea6\u4e0e\u68c0\u6d4b\u7b97\u6cd5\u7684\u654f\u611f\u5ea6\u6210\u6b63\u6bd4\uff0c\u7b97\u6cd5\u654f\u611f\u5ea6\u7684\u503c\u8d8a\u5927\uff0c\u68c0\u6d4b\u51fa\u7684\u53ef\u7591\u6587\u4ef6\u5305\u542b\u654f\u611f\u4fe1\u606f\u7684\u53ef\u80fd\u6027\u8d8a\u5927\u3002  d \u2013 \u6253\u5370\u5e26\u884c\u53f7\u7684\u8c03\u8bd5\u4fe1\u606f\u3002  t \u2013 \u8bbe\u7f6e\u8981\u68c0\u6d4b\u54ea\u4e9b\u9690\u5199\u5de5\u5177\uff08\u9ed8\u8ba4\u68c0\u6d4b jopi\uff09\uff0c\u53ef\u8bbe\u7f6e\u7684\u9009\u9879\u5982\u4e0b\uff1a  j \u2013 \u68c0\u6d4b\u56fe\u50cf\u4e2d\u7684\u4fe1\u606f\u662f\u5426\u662f\u7528 jsteg \u5d4c\u5165\u7684\u3002  o \u2013 \u68c0\u6d4b\u56fe\u50cf\u4e2d\u7684\u4fe1\u606f\u662f\u5426\u662f\u7528 outguess \u5d4c\u5165\u7684\u3002  p \u2013 \u68c0\u6d4b\u56fe\u50cf\u4e2d\u7684\u4fe1\u606f\u662f\u5426\u662f\u7528 jphide \u5d4c\u5165\u7684\u3002  i \u2013 \u68c0\u6d4b\u56fe\u50cf\u4e2d\u7684\u4fe1\u606f\u662f\u5426\u662f\u7528 invisible secrets \u5d4c\u5165\u7684\u3002    Steghide 0.5.1 win32    Outguess amd64 deb    PNGCheck 2.3.0 win32    JPHS win32    OurSecret",
+            "title": "\u56fe\u7247\u9690\u5199"
+        },
+        {
+            "location": "/misc/#_2",
+            "text": "Ziperello  zip \u538b\u7f29\u5305\u5bc6\u7801\u7206\u7834\u3002    Advanced Rar Password Recovery    Advanced Zip Password Recovery",
+            "title": "\u538b\u7f29\u5305"
+        },
+        {
+            "location": "/misc/#_3",
+            "text": "Elcomsoft Wireless Security Auditor",
+            "title": "\u65e0\u7ebf\u5bc6\u7801"
+        },
+        {
+            "location": "/misc/#_4",
+            "text": "010 Editor Windows x64",
+            "title": "\u7f16\u8f91\u5668"
+        },
+        {
+            "location": "/misc/#ntfs",
+            "text": "Alternate Stream View",
+            "title": "NTFS \u6587\u4ef6\u6d41"
+        },
+        {
+            "location": "/misc/#_5",
+            "text": "Audacity  \u5728\u7ebf\u62e8\u53f7\u97f3\u8bc6\u522b",
+            "title": "\u97f3\u9891\u9690\u5199"
+        },
+        {
+            "location": "/misc/#_6",
+            "text": "Elcomsoft Forensic Disk Decryptor  \u7834\u89e3\u5de5\u5177",
+            "title": "\u53d6\u8bc1"
+        },
+        {
+            "location": "/misc/#_7",
+            "text": "\u6761\u5f62\u7801\u3001\u4e8c\u7ef4\u7801\u5728\u7ebf\u8bc6\u522b",
+            "title": "\u6761\u5f62\u7801\u3001\u4e8c\u7ef4\u7801"
+        },
+        {
+            "location": "/misc/#gif",
+            "text": "GIF \u5728\u7ebf\u5206\u89e3",
+            "title": "GIF"
+        },
+        {
+            "location": "/crypto/",
+            "text": "Crypto\n\u00b6\n\n\n\u53e4\u5178\u5bc6\u7801\n\u00b6\n\n\n\n\n\n\nCAP4\n\n\n\n\n\n\nJPK - 406\n\n\n\n\n\n\nRC4 \u5728\u7ebf\u52a0\u89e3\u5bc6\n\n\n\n\n\n\n\u6805\u680f\u5bc6\u7801\u52a0\u89e3\u5bc6\u5de5\u5177\n\n\n\n\n\n\n\u6469\u65af\u5bc6\u7801\u5728\u7ebf\u52a0\u89e3\u5bc6\n\n\n\n\n\n\n\u7ef4\u5409\u5c3c\u4e9a\u5bc6\u7801\u5728\u7ebf\u89e3\u5bc6 1\n\n\n\n\n\n\n\u7ef4\u5409\u5c3c\u4e9a\u5bc6\u7801\u5728\u7ebf\u89e3\u5bc6 2\n\n\n\n\n\n\n\u53a6\u5927 ph0en1x \u5728\u7ebf\u5bc6\u7801\u5de5\u5177\n\n\n\n\n\n\n\u5bc6\u7801\u673a\u5668\n\n\n\u6805\u680f\u3001\u51ef\u6492\u3001\u7ef4\u5409\u5c3c\u4e9a\u3001\u6469\u65af\u3001\u7f6e\u6362\u7b49\u3002\n\n\n\n\n\n\nquipquip\n\n\n\u79fb\u4f4d\u5bc6\u7801\u7834\u89e3\u3002\n\n\n\n\n\n\nPYG \u5bc6\u7801\u5b66\u7efc\u5408\u5de5\u5177\n\n\n\n\n\n\nRSA\n\u00b6\n\n\n\n\n\n\nyafu \u5927\u6570\u5206\u89e3\n\n\n\n\n\n\nfactordb \u5728\u7ebf\u5927\u6570\u5206\u89e3\n\n\n\n\n\n\nRSATool\n\n\n\n\n\n\nwiener-attack\n\n\n\n\n\n\nrsatool\n\n\npython rsatool.py -f PEM -o key.pem -n \n13826123222358393307\n -d \n9793706120266356337\n\npython rsatool.py -f DER -o key.der -p \n4184799299\n -q \n3303891593\n\n\n\n\n\n\n\n\n\nHash\n\u00b6\n\n\n\n\n\n\nCRC32 \u78b0\u649e\u811a\u672c\n\n\ncrc32.py -h\nusage: crc32.py \n[\n-h\n]\n action ...\n\nReverse, undo, and calculate CRC32 checksums\n\npositional arguments:\n  action\n    flip      flip the bits to convert normal\n(\nmsbit-first\n)\n polynomials to\n              reversed \n(\nlsbit-first\n)\n and vice versa\n    reciprocal\n              find the reciprocal \n(\nKoopman notation\n)\n of a reversed \n(\nlsbit-\n              first\n)\n polynomial and vice versa\n    table     generate a lookup table \nfor\n a polynomial\n    reverse   find a patch that causes the CRC32 checksum to become a desired\n              value\n    undo      rewind a CRC32 checksum\n    calc      calculate the CRC32 checksum\n\noptional arguments:\n  -h, --help  show this \nhelp\n message and \nexit\n\n\n\n\n\n\n\n\n\n\u5176\u4ed6\n\u00b6\n\n\n\n\nCisco \u5bc6\u7801\u5728\u7ebf\u7834\u89e3\n\n\nBase64 \u52a0\u89e3\u5bc6",
+            "title": "Crypto \u5bc6\u7801\u5b66"
+        },
+        {
+            "location": "/crypto/#crypto",
+            "text": "",
+            "title": "Crypto"
+        },
+        {
+            "location": "/crypto/#_1",
+            "text": "CAP4    JPK - 406    RC4 \u5728\u7ebf\u52a0\u89e3\u5bc6    \u6805\u680f\u5bc6\u7801\u52a0\u89e3\u5bc6\u5de5\u5177    \u6469\u65af\u5bc6\u7801\u5728\u7ebf\u52a0\u89e3\u5bc6    \u7ef4\u5409\u5c3c\u4e9a\u5bc6\u7801\u5728\u7ebf\u89e3\u5bc6 1    \u7ef4\u5409\u5c3c\u4e9a\u5bc6\u7801\u5728\u7ebf\u89e3\u5bc6 2    \u53a6\u5927 ph0en1x \u5728\u7ebf\u5bc6\u7801\u5de5\u5177    \u5bc6\u7801\u673a\u5668  \u6805\u680f\u3001\u51ef\u6492\u3001\u7ef4\u5409\u5c3c\u4e9a\u3001\u6469\u65af\u3001\u7f6e\u6362\u7b49\u3002    quipquip  \u79fb\u4f4d\u5bc6\u7801\u7834\u89e3\u3002    PYG \u5bc6\u7801\u5b66\u7efc\u5408\u5de5\u5177",
+            "title": "\u53e4\u5178\u5bc6\u7801"
+        },
+        {
+            "location": "/crypto/#rsa",
+            "text": "yafu \u5927\u6570\u5206\u89e3    factordb \u5728\u7ebf\u5927\u6570\u5206\u89e3    RSATool    wiener-attack    rsatool  python rsatool.py -f PEM -o key.pem -n  13826123222358393307  -d  9793706120266356337 \npython rsatool.py -f DER -o key.der -p  4184799299  -q  3303891593",
+            "title": "RSA"
+        },
+        {
+            "location": "/crypto/#hash",
+            "text": "CRC32 \u78b0\u649e\u811a\u672c  crc32.py -h\nusage: crc32.py  [ -h ]  action ...\n\nReverse, undo, and calculate CRC32 checksums\n\npositional arguments:\n  action\n    flip      flip the bits to convert normal ( msbit-first )  polynomials to\n              reversed  ( lsbit-first )  and vice versa\n    reciprocal\n              find the reciprocal  ( Koopman notation )  of a reversed  ( lsbit-\n              first )  polynomial and vice versa\n    table     generate a lookup table  for  a polynomial\n    reverse   find a patch that causes the CRC32 checksum to become a desired\n              value\n    undo      rewind a CRC32 checksum\n    calc      calculate the CRC32 checksum\n\noptional arguments:\n  -h, --help  show this  help  message and  exit",
+            "title": "Hash"
+        },
+        {
+            "location": "/crypto/#_2",
+            "text": "Cisco \u5bc6\u7801\u5728\u7ebf\u7834\u89e3  Base64 \u52a0\u89e3\u5bc6",
+            "title": "\u5176\u4ed6"
+        },
+        {
+            "location": "/reverse/",
+            "text": "Reverse\n\u00b6\n\n\n\u53cd\u6c47\u7f16\n\u00b6\n\n\n\n\nIDA Pro 6.8 Green\n\n\ndnSpy\n\n\nILSpy\n\n\nIDA Pro 7.0 Green\n\n\n\n\n\u8c03\u8bd5\n\u00b6\n\n\n\n\n\u543e\u7231\u7834\u89e3\u4e13\u7528 Ollydbg\n\n\n\n\n\u8131\u58f3\n\u00b6\n\n\n\n\nUPX Unpacker\n\n\n\n\nPython\n\u00b6\n\n\n\n\nunpy2exe\n\n\n\n\nAndroid\n\u00b6\n\n\n\n\nAndroidResEdit\n\n\nJD - GUI\n\n\nAndroid Killer\n\n\nJEB - 2.2.7",
+            "title": "Reverse \u9006\u5411\u5de5\u7a0b"
+        },
+        {
+            "location": "/reverse/#reverse",
+            "text": "",
+            "title": "Reverse"
+        },
+        {
+            "location": "/reverse/#_1",
+            "text": "IDA Pro 6.8 Green  dnSpy  ILSpy  IDA Pro 7.0 Green",
+            "title": "\u53cd\u6c47\u7f16"
+        },
+        {
+            "location": "/reverse/#_2",
+            "text": "\u543e\u7231\u7834\u89e3\u4e13\u7528 Ollydbg",
+            "title": "\u8c03\u8bd5"
+        },
+        {
+            "location": "/reverse/#_3",
+            "text": "UPX Unpacker",
+            "title": "\u8131\u58f3"
+        },
+        {
+            "location": "/reverse/#python",
+            "text": "unpy2exe",
+            "title": "Python"
+        },
+        {
+            "location": "/reverse/#android",
+            "text": "AndroidResEdit  JD - GUI  Android Killer  JEB - 2.2.7",
+            "title": "Android"
+        },
+        {
+            "location": "/pwn/",
+            "text": "PWN\n\u00b6\n\n\n\u53cd\u6c47\u7f16\n\u00b6\n\n\n\n\nIDA Pro 6.8 Green\n\n\n\n\n\u8c03\u8bd5\n\u00b6\n\n\n\n\n\n\npeda\n\n\n\n\nInstallation\n\n\ngit clone https://github.com/longld/peda.git ~/peda\n\necho\n \n\"source ~/peda/peda.py\"\n >> ~/.gdbinit\n\necho\n \n\"DONE! debug your program with gdb and enjoy\"\n\n\n\n\n\n\n\n\u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305\n\n\n\n\n\n\nPatch\n\u00b6\n\n\n\n\n\n\nFentanyl\n\n\nIDA Python \u811a\u672c\uff0c\u7528\u4e8e\u5feb\u901f patch\u3002\n\n\n\u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305\n \n\n\n\n\nUsage\n\n\nLoading Fentanyl.py\n\n\n\n\nAlt+F7\n\u00a0or\u00a0\nFile > Script File\n\u00a0to load scripts\n\n\nBrowse to\u00a0\nmain.py\n\u00a0and open it\n\n\nThat's it!\n\n\n\n\nKey Bindings\n\n\nSome of these keybindings can be accessed by right-clicking on the screen in graph view.\n\n\n\n\nAlt-N\n\u00a0Convert instructions to nops\n\n\nAlt-X\n\u00a0Nop all xrefs to this function\n\n\nAlt-J\n\u00a0Invert conditional jump\n\n\nAlt-P\n\u00a0Patch instruction\n\n\nAlt-Z\n\u00a0Undo modification (Won't always work. Should still be careful editing.)\n\n\nAlt-Y\n\u00a0Redo modification (Won't always work. Should still be careful editing.)\n\n\nAlt-S\n\u00a0Save file\n\n\nAlt-C\n\u00a0Find Code Caves\n\n\nCtrl-Alt-F\n\u00a0Make jump unconditional\n\n\nCtrl-Alt-N\n\u00a0Neuter the binary (remove calls to fork, setuid, setgid, getpwnam, setgroups, and chdir)",
+            "title": "Pwn \u4e8c\u8fdb\u5236\u6f0f\u6d1e\u6316\u6398"
+        },
+        {
+            "location": "/pwn/#pwn",
+            "text": "",
+            "title": "PWN"
+        },
+        {
+            "location": "/pwn/#_1",
+            "text": "IDA Pro 6.8 Green",
+            "title": "\u53cd\u6c47\u7f16"
+        },
+        {
+            "location": "/pwn/#_2",
+            "text": "peda   Installation  git clone https://github.com/longld/peda.git ~/peda echo   \"source ~/peda/peda.py\"  >> ~/.gdbinit echo   \"DONE! debug your program with gdb and enjoy\"    \u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305",
+            "title": "\u8c03\u8bd5"
+        },
+        {
+            "location": "/pwn/#patch",
+            "text": "Fentanyl  IDA Python \u811a\u672c\uff0c\u7528\u4e8e\u5feb\u901f patch\u3002  \u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305     Usage  Loading Fentanyl.py   Alt+F7 \u00a0or\u00a0 File > Script File \u00a0to load scripts  Browse to\u00a0 main.py \u00a0and open it  That's it!   Key Bindings  Some of these keybindings can be accessed by right-clicking on the screen in graph view.   Alt-N \u00a0Convert instructions to nops  Alt-X \u00a0Nop all xrefs to this function  Alt-J \u00a0Invert conditional jump  Alt-P \u00a0Patch instruction  Alt-Z \u00a0Undo modification (Won't always work. Should still be careful editing.)  Alt-Y \u00a0Redo modification (Won't always work. Should still be careful editing.)  Alt-S \u00a0Save file  Alt-C \u00a0Find Code Caves  Ctrl-Alt-F \u00a0Make jump unconditional  Ctrl-Alt-N \u00a0Neuter the binary (remove calls to fork, setuid, setgid, getpwnam, setgroups, and chdir)",
+            "title": "Patch"
+        },
+        {
+            "location": "/web/",
+            "text": "Web\n\u00b6\n\n\n\u83dc\u5200\n\u00b6\n\n\n\n\n\n\n\u4e60\u79d1\u5175\u5668\u5e93\u7248\u83dc\u5200\n\n\n\n\n\n\n\u5b98\u7f51\u65b0\u7248\u83dc\u5200\n\n\n\u89e3\u538b\u5bc6\u7801 \nwww.maicaidao.com\n\n\n\n\n\n\nCKnife\n\n\n\u5bc6\u7801\uff1af65g\n\n\n\n\n\n\n\u6ce8\u5165\n\u00b6\n\n\n\n\n\n\nsqlmap\n\n\n\n\nInstallation\n\n\nYou can download the latest tarball by clicking\u00a0\nhere\n\u00a0or latest zipball by clicking\u00a0\nhere\n.\n\n\nPreferably, you can download sqlmap by cloning the\u00a0\nGit\n\u00a0repository:\n\n\ngit clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev\n\n\n\n\nsqlmap works out of the box with\u00a0\nPython\n\u00a0version\u00a0\n2.6.x\n\u00a0and\u00a0\n2.7.x\n\u00a0on any platform.\n\n\nUsage\n\n\nTo get a list of basic options and switches use:\n\n\npython sqlmap.py -h\n\n\n\n\nTo get a list of all options and switches use:\n\n\npython sqlmap.py -hh\n\n\n\n\nYou can find a sample run\u00a0\nhere\n. To get an overview of sqlmap capabilities, list of supported features and description of all options and switches, along with examples, you are advised to consult the\u00a0\nuser's manual\n.\n\n\n\n\n\u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305\n\n\n\n\n\n\n\u6293\u5305\n\u00b6\n\n\n\n\n\n\nBurp Suite 1.6 pro\n\n\n\n\n\n\nWireShark 2.2.3 win32\n\n\n\n\n\n\nPKAV HTTP FUZZER\n\n\n\u5e26\u4e00\u70b9\u7b80\u5355\u7684\u9a8c\u8bc1\u7801\u8bc6\u522b\u3002\n\n\n\n\n\n\n\u76ee\u5f55\u626b\u63cf\n\u00b6\n\n\n\n\n\n\n\u5fa1\u5251\u540e\u53f0\u626b\u63cf\n\n\n\n\n\u81ea\u7528\u5fa1\u5251\u5b57\u5178\n\n\n\n\n\n\n\n\ndirfuzz\n\n\n\n\n\n\nweakfilescan\n\n\ndirfuzz \u8fdb\u9636\u7248\u3002\n\n\n\u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305\n\n\n\n\n\n\n\u732a\u732a\u4fa0\u5b57\u5178\u6253\u5305\n\n\n\n\n\n\nGithub \u4e0a\u67d0\u4e0d\u660e\u5b57\u5178\n\n\n\n\n\n\n\u6e90\u7801\u6cc4\u9732\n\u00b6\n\n\n\n\n\n\nSeay - SVN \u6e90\u7801\u6cc4\u9732\u5229\u7528\u5de5\u5177\n\n\n\n\n\n\nGithack\n\n\n\n\n\u7528\u6cd5\u793a\u4f8b\n\n\nGitHack.py http://www.openssl.org/.git/\n\n\n\n\n\n\n\u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305\n\n\n\n\n\n\n\u65e5\u5fd7\u5206\u6790\n\u00b6\n\n\n\n\n\n\nLogForensics\n\n\n\u65e5\u5fd7\u5206\u6790 Perl \u811a\u672c\uff0c\u4f7f\u7528\u65b9\u6cd5\uff1a\n\n\nPerl LogForensics.pl -file logfile -websvr \n(\nnginx\n|\nhttpd\n)\n \n[\n-ip ip\n(\nip,ip,ip\n)\n|\n-url url\n(\nurl,url,url\n)]\n\n\n\n\n\nfile\n \uff1a\u65e5\u5fd7\u6587\u4ef6\u8def\u5f84 \n\n\nwebsvr\n \uff1a\u65e5\u5fd7\u7c7b\u578b\n\n\nip\n \uff1a\u8d77\u59cb\u8c03\u67e5 ip \u6216 ip \u5217\u8868\uff0c\u4ee5\u9017\u53f7\u5206\u5272\n\n\nurl\n \uff1a\u8d77\u59cb\u8c03\u67e5 cgi \u94fe\u63a5\u6216\u94fe\u63a5\u5217\u8868\uff0c\u4ee5\u9017\u53f7\u5206\u5272\n\n\n\n\n\n\nngxtop\n\n\n\n\nreal-time metrics for nginx server (and others)\n\n\n\n\n\u5b89\u88c5\uff1a\npip install ngxtop\n\n\n\u793a\u4f8b\uff1a\n\n\nngxtop top remote_addr    \n# View top source IPs of clients\n\nngxtop -i \n'status >= 400'\n print request status http_referer    \n# List 4xx or 5xx responses together with HTTP referer\n\ntail -f /var/log/apache2/access.log \n|\n ngxtop -f common    \n# Parse apache log from remote server with common format\n\n\n\n\n\n\n\n\n\n\u5185\u7f51\n\u00b6\n\n\n\n\n\n\nTermite\n\n\n\u8df3\u677f\u673a\u7ba1\u7406\u5de5\u5177\u3002\n\u4e0b\u8f7d\n\n\n\n\n\n\n\n\n\u4ee5\u670d\u52a1\u6a21\u5f0f\u542f\u52a8\u4e00\u4e2a agent \u670d\u52a1\u3002\n\n\n$ ./agent -l p \n8888\n\n\n\n\n\n\n\n\n\n\u4ee4\u7ba1\u7406\u7aef\u8fde\u63a5\u5230 agent \u5e76\u5bf9 agent \u8fdb\u884c\u7ba1\u7406\u3002\n\n\n$ ./admin -c \n127\n.0.0.1 -p \n8888\n\n\n\n\n\n\n\n\n\n\u6b64\u65f6\uff0cadmin \u7aef\u4f1a\u5f97\u5230\u4e00\u4e2a\u5185\u7f6e\u7684 shell\uff0c\u8f93\u5165 help \u6307\u4ee4\u53ef\u4ee5\u5f97\u5230\u5e2e\u52a9\u4fe1\u606f\u3002\n\n\n>> \nhelp\n\n\n\n\n\n\n\n\n\n\u901a\u8fc7 show \u6307\u4ee4\u53ef\u4ee5\u5f97\u5230\u5f53\u524d agent \u7684\u62d3\u6251\u60c5\u51b5\u3002\n\n\n>> show \n 0M\n +-- 1M\n \u7531\u4e8e\u5f53\u524d\u62d3\u6251\u4e2d\u53ea\u6709\u4e00\u4e2aagent\uff0c\u6240\u4ee5\u5c55\u793a\u7ed3\u679c\u53ea\u6709 1M ,\n  \u5176\u4e2d1 \u4e3a\u8282\u70b9\u7684ID\u53f7\uff0c\n  M\u4e3aMacOS\u7cfb\u7edf\u7684\u7b80\u5199\uff0cLinux\u4e3aL\uff0cWindows\u7b80\u5199\u4e3aW\u3002\n\n\n\n\n\n\n\n\n\u5c06\u65b0 agent \u52a0\u5165\u5f53\u524d\u62d3\u6251\u3002\n\n\n./agent -c \n127\n.0.0.1 -p \n8888\n\n\n\n\n\n\n\n\n\n\u6b64\u65f6 show \u6307\u4ee4\u5c06\u5f97\u5230\u5982\u4e0b\u6548\u679c\u3002\n\n\n0M\n +-- 1M\n \n|\n   +-- 2M\n  \u8fd9\u8868\u660e\uff0c\u5f53\u524d\u62d3\u6251\u4e2d\u6709\u4e24\u4e2a\u8282\u70b9\uff0c\u5176\u4e2d\u7531\u4e8e2\u8282\u70b9\u9700\u8981\u901a\u8fc71\u8282\u70b9\u624d\u80fd\u8bbf\u95ee\uff0c\u6240\u4ee5\u4e0b\u6302\u57281\u8282\u70b9\u4e0b\u65b9\u3002\n\n\n\n\n\n\n\n\n\u5728 2 \u8282\u70b9\u5f00\u542f socks \u4ee3\u7406\uff0c\u5e76\u7ed1\u5b9a\u5728\u672c\u5730\u7aef\u53e3\n\n\n>> goto \n2\n\n    \u5c06\u5f53\u524d\u88ab\u7ba1\u7406\u8282\u70b9\u5207\u6362\u4e3a \n2\n \u53f7\u8282\u70b9\u3002\n>> socks \n1080\n\n   \u6b64\u65f6\uff0c\u672c\u57301080 \u7aef\u53e3\u4f1a\u542f\u52a8\u4e2a\u76d1\u542c\u670d\u52a1\uff0c\u800c\u670d\u52a1\u63d0\u4f9b\u8005\u4e3a2\u53f7\u8282\u70b9\u3002\n\n\n\n\n\n\n\n\n\u5728 1 \u53f7\u8282\u70b9\u5f00\u542f\u4e00\u4e2a shell \u5e76\u7ed1\u5b9a\u5230\u672c\u5730\u7aef\u53e3\n\n\n>> goto \n1\n\n>> shell \n7777\n\n     \u6b64\u65f6\uff0c\u901a\u8fc7nc\u672c\u5730\u7684 \n7777\n \u7aef\u53e3\uff0c\u5c31\u53ef\u4ee5\u5f97\u5230\u4e00\u4e2a \n1\n \u8282\u70b9\u63d0\u4f9b\u7684 shell.\n\n\n\n\n\n\n\n\n\u5c06\u8fdc\u7a0b\u7684\u6587\u4ef6\u4e0b\u8f7d\u81f3\u672c\u5730\n\n\n>> goto \n1\n\n>> downfile \n1\n.txt \n2\n.txt\n    \u5c061 \u8282\u70b9\uff0c\u76ee\u5f55\u4e0b\u7684 \n1\n.txt \u4e0b\u8f7d\u81f3\u672c\u5730\uff0c\u5e76\u547d\u540d\u4e3a2.txt\n\n\n\n\n\n\n\n\n\u4e0a\u4f20\u6587\u4ef6\u81f3\u8fdc\u7a0b\u8282\u70b9\n\n\n>> goto \n2\n\n>> upfile \n2\n.txt \n3\n.txt\n    \u5c06\u672c\u5730\u7684 \n2\n.txt \u4e0a\u4f20\u81f3 2\u53f7\u8282\u70b9\u7684\u76ee\u5f55\uff0c\u5e76\u547d\u540d\u4e3a3.txt\n\n\n\n\n\n\n\n\n\u7aef\u53e3\u8f6c\u63a5\n\n\n>> goto \n2\n \n>> lcxtran \n3388\n \n10\n.0.0.1 \n3389\n\n    \u4ee52\u53f7\u8282\u70b9\u4e3a\u8df3\u677f\uff0c\u5c06 \n10\n.0.0.1 \u7684 \n3389\n \u7aef\u53e3\u6620\u5c04\u81f3\u672c\u5730\u7684 \n3388\n \u7aef\u53e3\n\n\n\n\n\n\n\n\n\u66f4\u591a\u652f\u6301\n\n\nhttp://rootkiter.com/toolvideo/toolmp4/1maintalk.mp4\nhttp://rootkiter.com/toolvideo/toolmp4/2socks.mp4\nhttp://rootkiter.com/toolvideo/toolmp4/3lcxtran.mp4\nhttp://rootkiter.com/toolvideo/toolmp4/4shell.mp4\nhttp://rootkiter.com/toolvideo/toolmp4/5file.mp4",
+            "title": "Web \u7f51\u7ad9\u5e94\u7528"
+        },
+        {
+            "location": "/web/#web",
+            "text": "",
+            "title": "Web"
+        },
+        {
+            "location": "/web/#_1",
+            "text": "\u4e60\u79d1\u5175\u5668\u5e93\u7248\u83dc\u5200    \u5b98\u7f51\u65b0\u7248\u83dc\u5200  \u89e3\u538b\u5bc6\u7801  www.maicaidao.com    CKnife  \u5bc6\u7801\uff1af65g",
+            "title": "\u83dc\u5200"
+        },
+        {
+            "location": "/web/#_2",
+            "text": "sqlmap   Installation  You can download the latest tarball by clicking\u00a0 here \u00a0or latest zipball by clicking\u00a0 here .  Preferably, you can download sqlmap by cloning the\u00a0 Git \u00a0repository:  git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev  sqlmap works out of the box with\u00a0 Python \u00a0version\u00a0 2.6.x \u00a0and\u00a0 2.7.x \u00a0on any platform.  Usage  To get a list of basic options and switches use:  python sqlmap.py -h  To get a list of all options and switches use:  python sqlmap.py -hh  You can find a sample run\u00a0 here . To get an overview of sqlmap capabilities, list of supported features and description of all options and switches, along with examples, you are advised to consult the\u00a0 user's manual .   \u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305",
+            "title": "\u6ce8\u5165"
+        },
+        {
+            "location": "/web/#_3",
+            "text": "Burp Suite 1.6 pro    WireShark 2.2.3 win32    PKAV HTTP FUZZER  \u5e26\u4e00\u70b9\u7b80\u5355\u7684\u9a8c\u8bc1\u7801\u8bc6\u522b\u3002",
+            "title": "\u6293\u5305"
+        },
+        {
+            "location": "/web/#_4",
+            "text": "\u5fa1\u5251\u540e\u53f0\u626b\u63cf   \u81ea\u7528\u5fa1\u5251\u5b57\u5178     dirfuzz    weakfilescan  dirfuzz \u8fdb\u9636\u7248\u3002  \u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305    \u732a\u732a\u4fa0\u5b57\u5178\u6253\u5305    Github \u4e0a\u67d0\u4e0d\u660e\u5b57\u5178",
+            "title": "\u76ee\u5f55\u626b\u63cf"
+        },
+        {
+            "location": "/web/#_5",
+            "text": "Seay - SVN \u6e90\u7801\u6cc4\u9732\u5229\u7528\u5de5\u5177    Githack   \u7528\u6cd5\u793a\u4f8b  GitHack.py http://www.openssl.org/.git/   \u622a\u81f3 2016 \u5e74 12 \u6708 27 \u65e5 master \u5206\u652f\u6253\u5305",
+            "title": "\u6e90\u7801\u6cc4\u9732"
+        },
+        {
+            "location": "/web/#_6",
+            "text": "LogForensics  \u65e5\u5fd7\u5206\u6790 Perl \u811a\u672c\uff0c\u4f7f\u7528\u65b9\u6cd5\uff1a  Perl LogForensics.pl -file logfile -websvr  ( nginx | httpd )   [ -ip ip ( ip,ip,ip ) | -url url ( url,url,url )]   file  \uff1a\u65e5\u5fd7\u6587\u4ef6\u8def\u5f84   websvr  \uff1a\u65e5\u5fd7\u7c7b\u578b  ip  \uff1a\u8d77\u59cb\u8c03\u67e5 ip \u6216 ip \u5217\u8868\uff0c\u4ee5\u9017\u53f7\u5206\u5272  url  \uff1a\u8d77\u59cb\u8c03\u67e5 cgi \u94fe\u63a5\u6216\u94fe\u63a5\u5217\u8868\uff0c\u4ee5\u9017\u53f7\u5206\u5272    ngxtop   real-time metrics for nginx server (and others)   \u5b89\u88c5\uff1a pip install ngxtop  \u793a\u4f8b\uff1a  ngxtop top remote_addr     # View top source IPs of clients \nngxtop -i  'status >= 400'  print request status http_referer     # List 4xx or 5xx responses together with HTTP referer \ntail -f /var/log/apache2/access.log  |  ngxtop -f common     # Parse apache log from remote server with common format",
+            "title": "\u65e5\u5fd7\u5206\u6790"
+        },
+        {
+            "location": "/web/#_7",
+            "text": "Termite  \u8df3\u677f\u673a\u7ba1\u7406\u5de5\u5177\u3002 \u4e0b\u8f7d     \u4ee5\u670d\u52a1\u6a21\u5f0f\u542f\u52a8\u4e00\u4e2a agent \u670d\u52a1\u3002  $ ./agent -l p  8888     \u4ee4\u7ba1\u7406\u7aef\u8fde\u63a5\u5230 agent \u5e76\u5bf9 agent \u8fdb\u884c\u7ba1\u7406\u3002  $ ./admin -c  127 .0.0.1 -p  8888     \u6b64\u65f6\uff0cadmin \u7aef\u4f1a\u5f97\u5230\u4e00\u4e2a\u5185\u7f6e\u7684 shell\uff0c\u8f93\u5165 help \u6307\u4ee4\u53ef\u4ee5\u5f97\u5230\u5e2e\u52a9\u4fe1\u606f\u3002  >>  help     \u901a\u8fc7 show \u6307\u4ee4\u53ef\u4ee5\u5f97\u5230\u5f53\u524d agent \u7684\u62d3\u6251\u60c5\u51b5\u3002  >> show \n 0M\n +-- 1M\n \u7531\u4e8e\u5f53\u524d\u62d3\u6251\u4e2d\u53ea\u6709\u4e00\u4e2aagent\uff0c\u6240\u4ee5\u5c55\u793a\u7ed3\u679c\u53ea\u6709 1M ,\n  \u5176\u4e2d1 \u4e3a\u8282\u70b9\u7684ID\u53f7\uff0c\n  M\u4e3aMacOS\u7cfb\u7edf\u7684\u7b80\u5199\uff0cLinux\u4e3aL\uff0cWindows\u7b80\u5199\u4e3aW\u3002    \u5c06\u65b0 agent \u52a0\u5165\u5f53\u524d\u62d3\u6251\u3002  ./agent -c  127 .0.0.1 -p  8888     \u6b64\u65f6 show \u6307\u4ee4\u5c06\u5f97\u5230\u5982\u4e0b\u6548\u679c\u3002  0M\n +-- 1M\n  |    +-- 2M\n  \u8fd9\u8868\u660e\uff0c\u5f53\u524d\u62d3\u6251\u4e2d\u6709\u4e24\u4e2a\u8282\u70b9\uff0c\u5176\u4e2d\u7531\u4e8e2\u8282\u70b9\u9700\u8981\u901a\u8fc71\u8282\u70b9\u624d\u80fd\u8bbf\u95ee\uff0c\u6240\u4ee5\u4e0b\u6302\u57281\u8282\u70b9\u4e0b\u65b9\u3002    \u5728 2 \u8282\u70b9\u5f00\u542f socks \u4ee3\u7406\uff0c\u5e76\u7ed1\u5b9a\u5728\u672c\u5730\u7aef\u53e3  >> goto  2 \n    \u5c06\u5f53\u524d\u88ab\u7ba1\u7406\u8282\u70b9\u5207\u6362\u4e3a  2  \u53f7\u8282\u70b9\u3002\n>> socks  1080 \n   \u6b64\u65f6\uff0c\u672c\u57301080 \u7aef\u53e3\u4f1a\u542f\u52a8\u4e2a\u76d1\u542c\u670d\u52a1\uff0c\u800c\u670d\u52a1\u63d0\u4f9b\u8005\u4e3a2\u53f7\u8282\u70b9\u3002    \u5728 1 \u53f7\u8282\u70b9\u5f00\u542f\u4e00\u4e2a shell \u5e76\u7ed1\u5b9a\u5230\u672c\u5730\u7aef\u53e3  >> goto  1 \n>> shell  7777 \n     \u6b64\u65f6\uff0c\u901a\u8fc7nc\u672c\u5730\u7684  7777  \u7aef\u53e3\uff0c\u5c31\u53ef\u4ee5\u5f97\u5230\u4e00\u4e2a  1  \u8282\u70b9\u63d0\u4f9b\u7684 shell.    \u5c06\u8fdc\u7a0b\u7684\u6587\u4ef6\u4e0b\u8f7d\u81f3\u672c\u5730  >> goto  1 \n>> downfile  1 .txt  2 .txt\n    \u5c061 \u8282\u70b9\uff0c\u76ee\u5f55\u4e0b\u7684  1 .txt \u4e0b\u8f7d\u81f3\u672c\u5730\uff0c\u5e76\u547d\u540d\u4e3a2.txt    \u4e0a\u4f20\u6587\u4ef6\u81f3\u8fdc\u7a0b\u8282\u70b9  >> goto  2 \n>> upfile  2 .txt  3 .txt\n    \u5c06\u672c\u5730\u7684  2 .txt \u4e0a\u4f20\u81f3 2\u53f7\u8282\u70b9\u7684\u76ee\u5f55\uff0c\u5e76\u547d\u540d\u4e3a3.txt    \u7aef\u53e3\u8f6c\u63a5  >> goto  2  \n>> lcxtran  3388   10 .0.0.1  3389 \n    \u4ee52\u53f7\u8282\u70b9\u4e3a\u8df3\u677f\uff0c\u5c06  10 .0.0.1 \u7684  3389  \u7aef\u53e3\u6620\u5c04\u81f3\u672c\u5730\u7684  3388  \u7aef\u53e3    \u66f4\u591a\u652f\u6301  http://rootkiter.com/toolvideo/toolmp4/1maintalk.mp4\nhttp://rootkiter.com/toolvideo/toolmp4/2socks.mp4\nhttp://rootkiter.com/toolvideo/toolmp4/3lcxtran.mp4\nhttp://rootkiter.com/toolvideo/toolmp4/4shell.mp4\nhttp://rootkiter.com/toolvideo/toolmp4/5file.mp4",
+            "title": "\u5185\u7f51"
+        },
+        {
+            "location": "/papers/",
+            "text": "Papers\n\u00b6\n\n\n\u6f14\u8bb2 PPT\n\u00b6\n\n\n\n\nKCon 2017 PPT\n\n\n\u8865\u5929\u6c99\u9f99\u5357\u4eac\u7ad9\u2014\u2014 Java \u4ee3\u7801\u5ba1\u8ba1\n\n\n2017 \u7b2c\u4e09\u5c4aPHP\u5168\u7403\u5f00\u53d1\u8005\u5927\u4f1a\n\n\n2017 \u5148\u77e5\u767d\u5e3d\u5927\u4f1a\u8bae\u9898 PPT\n\n\nCTF \u6bd4\u8d5b\u603b\u662f\u8f93\uff1f\u4f60\u8fd8\u5dee\u70b9 Tricks\uff01\n\n\nBuild Your SSRF EXP Autowork By \u732a\u732a\u4fa0\n\n\n\u6211\u7684\u767d\u5e3d\u5b66\u4e60\u8def\u7ebf\n\n\n2017 \u8865\u5929\u6c99\u9f99\u6210\u90fd\u7ad9 - \u6e17\u900f\u6d4b\u8bd5\u4e2d\u7684\u90a3\u70b9\u5c0f\u4e8b By l3m0n\n\n\n2016 \u8865\u5929\u767d\u5e3d\u6c99\u9f99\u6210\u90fd\u7ad9 - PWN \u65b0\u53f8\u673a\u5982\u4f55\u5feb\u901f\u4e0a\u8def By muhe\n\n\n\u7b2c\u4e94\u5c4a\u4e2d\u56fd\u7f51\u7edc\u5b89\u5168\u5927\u4f1a - \u6d4f\u89c8\u5668\u5730\u5740\u680f\u4e4b\u56f0\n\n\n\n\n\u4e66\u7c4d\n\u00b6\n\n\n\n\nSQL \u6ce8\u5165\u653b\u51fb\u4e0e\u9632\u5fa1\n\n\nMetasploit \u6e17\u900f\u6d4b\u8bd5\u9b54\u9b3c\u8bad\u7ec3\u8425\n\n\nPHP \u4ee3\u7801\u5ba1\u8ba1\u5165\u5751\u5b9e\u8df5\n\n\nWireShark \u6570\u636e\u5305\u5206\u6790\u5b9e\u6218\uff08\u7b2c\u4e8c\u7248\uff09\n\n\n\u9ed1\u5ba2\u5927\u66dd\u5149\u7b2c\u4e03\u7248",
+            "title": "Papers \u4f1a\u8bae"
+        },
+        {
+            "location": "/papers/#papers",
+            "text": "",
+            "title": "Papers"
+        },
+        {
+            "location": "/papers/#ppt",
+            "text": "KCon 2017 PPT  \u8865\u5929\u6c99\u9f99\u5357\u4eac\u7ad9\u2014\u2014 Java \u4ee3\u7801\u5ba1\u8ba1  2017 \u7b2c\u4e09\u5c4aPHP\u5168\u7403\u5f00\u53d1\u8005\u5927\u4f1a  2017 \u5148\u77e5\u767d\u5e3d\u5927\u4f1a\u8bae\u9898 PPT  CTF \u6bd4\u8d5b\u603b\u662f\u8f93\uff1f\u4f60\u8fd8\u5dee\u70b9 Tricks\uff01  Build Your SSRF EXP Autowork By \u732a\u732a\u4fa0  \u6211\u7684\u767d\u5e3d\u5b66\u4e60\u8def\u7ebf  2017 \u8865\u5929\u6c99\u9f99\u6210\u90fd\u7ad9 - \u6e17\u900f\u6d4b\u8bd5\u4e2d\u7684\u90a3\u70b9\u5c0f\u4e8b By l3m0n  2016 \u8865\u5929\u767d\u5e3d\u6c99\u9f99\u6210\u90fd\u7ad9 - PWN \u65b0\u53f8\u673a\u5982\u4f55\u5feb\u901f\u4e0a\u8def By muhe  \u7b2c\u4e94\u5c4a\u4e2d\u56fd\u7f51\u7edc\u5b89\u5168\u5927\u4f1a - \u6d4f\u89c8\u5668\u5730\u5740\u680f\u4e4b\u56f0",
+            "title": "\u6f14\u8bb2 PPT"
+        },
+        {
+            "location": "/papers/#_1",
+            "text": "SQL \u6ce8\u5165\u653b\u51fb\u4e0e\u9632\u5fa1  Metasploit \u6e17\u900f\u6d4b\u8bd5\u9b54\u9b3c\u8bad\u7ec3\u8425  PHP \u4ee3\u7801\u5ba1\u8ba1\u5165\u5751\u5b9e\u8df5  WireShark \u6570\u636e\u5305\u5206\u6790\u5b9e\u6218\uff08\u7b2c\u4e8c\u7248\uff09  \u9ed1\u5ba2\u5927\u66dd\u5149\u7b2c\u4e03\u7248",
+            "title": "\u4e66\u7c4d"
+        }
+    ]
+}
