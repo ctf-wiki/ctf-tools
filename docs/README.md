@@ -1,8 +1,7 @@
 
-CTF Tools
-======
+# CTF Tools
 
-收集 CTF 竞赛中用到的工具，采用 [MDwiki](http://www.mdwiki.info/) 部署。
+收集 CTF 竞赛中用到的工具，采用 [MkDocs](https://github.com/mkdocs/mkdocs) 部署。
 
 - Collections 工具合集
 - Environment 环境配置

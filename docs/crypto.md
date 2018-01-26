@@ -20,11 +20,11 @@
 
 - [密码机器](http://heartsnote.com/tools/cipher.htm)
 
-  栅栏、凯撒、维吉尼亚、摩斯、置换等。
+    栅栏、凯撒、维吉尼亚、摩斯、置换等。
 
 - [quipquip](http://quipqiup.com/)
 
-  移位密码破解。
+    移位密码破解。
 
 - [PYG 密码学综合工具](http://down.40huo.cn/crypto/pyg%E5%AF%86%E7%A0%81%E5%AD%A6%E7%BB%BC%E5%90%88%E5%B7%A5%E5%85%B7.zip)
 
@@ -40,38 +40,38 @@
 
 - [rsatool](https://github.com/ius/rsatool)
 
-  ```bash
-  python rsatool.py -f PEM -o key.pem -n 13826123222358393307 -d 9793706120266356337
-  python rsatool.py -f DER -o key.der -p 4184799299 -q 3303891593
-  ```
+    ```bash
+    python rsatool.py -f PEM -o key.pem -n 13826123222358393307 -d 9793706120266356337
+    python rsatool.py -f DER -o key.der -p 4184799299 -q 3303891593
+    ```
 
 
 ## Hash
 
-* [CRC32 碰撞脚本](https://github.com/theonlypwner/crc32/blog/master/crc32.py)
+- [CRC32 碰撞脚本](https://github.com/theonlypwner/crc32/blog/master/crc32.py)
 
-  ```bash
-  crc32.py -h
-  usage: crc32.py [-h] action ...
+    ```shell
+    crc32.py -h
+    usage: crc32.py [-h] action ...
 
-  Reverse, undo, and calculate CRC32 checksums
+    Reverse, undo, and calculate CRC32 checksums
 
-  positional arguments:
-    action
-      flip      flip the bits to convert normal(msbit-first) polynomials to
-                reversed (lsbit-first) and vice versa
-      reciprocal
-                find the reciprocal (Koopman notation) of a reversed (lsbit-
-                first) polynomial and vice versa
-      table     generate a lookup table for a polynomial
-      reverse   find a patch that causes the CRC32 checksum to become a desired
-                value
-      undo      rewind a CRC32 checksum
-      calc      calculate the CRC32 checksum
+    positional arguments:
+      action
+        flip      flip the bits to convert normal(msbit-first) polynomials to
+                  reversed (lsbit-first) and vice versa
+        reciprocal
+                  find the reciprocal (Koopman notation) of a reversed (lsbit-
+                  first) polynomial and vice versa
+        table     generate a lookup table for a polynomial
+        reverse   find a patch that causes the CRC32 checksum to become a desired
+                  value
+        undo      rewind a CRC32 checksum
+        calc      calculate the CRC32 checksum
 
-  optional arguments:
-    -h, --help  show this help message and exit
-  ```
+    optional arguments:
+      -h, --help  show this help message and exit
+    ```
 
 ## 其他
 
