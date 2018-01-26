@@ -1,5 +1,7 @@
 # CTF Tools
 
+[![Build Status](https://www.travis-ci.org/ctf-wiki/ctf-tools.svg?branch=master)](https://www.travis-ci.org/ctf-wiki/ctf-tools)
+
 收集 CTF 竞赛中用到的工具，采用 [MkDocs](https://github.com/mkdocs/mkdocs) 部署。
 
 - Collections 工具合集
