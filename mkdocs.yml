@@ -2,7 +2,7 @@
 site_name: CTF Tools
 site_description: CTF 军火库
 site_author: 40huo
-site_url: https://github.com/ctf-wiki/ctf-tools
+site_url: https://ctf-wiki.github.io/ctf-tools/
 
 # Repository
 repo_name: 'ctf-wiki/ctf-tools'
