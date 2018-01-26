@@ -23,7 +23,7 @@ fi
 
 # Copy in the HTML.  You may want to change this with your documentation path.
 rm -rf *
-cp -R ../$REPO/sites/* ./
+cp -R ../$REPO/site/* ./
 
 # Add and commit changes.
 git add -A .
