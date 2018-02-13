@@ -37,7 +37,7 @@ theme:
   feature:
     tabs: true
   font:
-    text: 'Monda'
+    text: 'Fira Sans'
     code: 'Fira Mono'
 
 # Customization
