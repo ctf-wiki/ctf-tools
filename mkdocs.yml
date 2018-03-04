@@ -33,7 +33,8 @@ theme:
     primary: 'white'
     accent: 'red'
   logo:
-    icon: 'school'
+    icon: 'gavel'
+  favicon: '_static/img/favicon.png'
   feature:
     tabs: true
   font:
@@ -46,7 +47,7 @@ extra:
     language: 'jp'
 
 extra_javascript:
-    - 'js/extra.js'
+    - '_static/js/extra.js'
     - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
 
 # Extensions
