@@ -1,0 +1,1179 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="CTF 军火库">
+      
+      
+        <link rel="canonical" href="https://ctf-wiki.github.io/ctf-tools/binary_core_tools/instrumentation/intel_pin/">
+      
+      
+        <meta name="author" content="CTF Wiki Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../_static/img/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.4, mkdocs-material-2.9.2">
+    
+    
+      
+        <title>Intel pin - CTF Tools</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.ba0fd1a6.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700|Fira+Mono">
+        <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#intel-pin" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://ctf-wiki.github.io/ctf-tools/" title="CTF Tools" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">gavel</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                CTF Tools
+              </span>
+              <span class="md-header-nav__topic">
+                Intel pin
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/ctf-wiki/ctf-tools/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ctf-wiki/ctf-tools
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="Binary Core Tools" class="md-tabs__link md-tabs__link--active">
+          Binary Core Tools
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon">gavel</i>
+      
+    </span>
+    CTF Tools
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/ctf-wiki/ctf-tools/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ctf-wiki/ctf-tools
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Binary Core Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Binary Core Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-1-1">
+      Instrumentation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        Instrumentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Intel pin
+      </label>
+    
+    <a href="./" title="Intel pin" class="md-nav__link md-nav__link--active">
+      Intel pin
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pin" title="什么是 pin" class="md-nav__link">
+    什么是 pin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instrument" title="什么是插桩(instrument)" class="md-nav__link">
+    什么是插桩(instrument)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-pintool" title="pin 和 pintool" class="md-nav__link">
+    pin 和 pintool
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-pintool_1" title="pin 的安装，pintool 的编译" class="md-nav__link">
+    pin 的安装，pintool 的编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin_1" title="pin 的使用" class="md-nav__link">
+    pin 的使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pintool" title="pintool 的分析" class="md-nav__link">
+    pintool 的分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-in-ctf" title="pin in CTF" class="md-nav__link">
+    pin in CTF
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ndh2k13-crackme-500" title="NDH2K13-crackme-500" class="md-nav__link">
+    NDH2K13-crackme-500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hxpctf-2017-main_strip" title="hxpCTF-2017-main_strip" class="md-nav__link">
+    hxpCTF-2017-main_strip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="总结" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pin" title="什么是 pin" class="md-nav__link">
+    什么是 pin
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instrument" title="什么是插桩(instrument)" class="md-nav__link">
+    什么是插桩(instrument)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-pintool" title="pin 和 pintool" class="md-nav__link">
+    pin 和 pintool
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-pintool_1" title="pin 的安装，pintool 的编译" class="md-nav__link">
+    pin 的安装，pintool 的编译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin_1" title="pin 的使用" class="md-nav__link">
+    pin 的使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pintool" title="pintool 的分析" class="md-nav__link">
+    pintool 的分析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-in-ctf" title="pin in CTF" class="md-nav__link">
+    pin in CTF
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ndh2k13-crackme-500" title="NDH2K13-crackme-500" class="md-nav__link">
+    NDH2K13-crackme-500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hxpctf-2017-main_strip" title="hxpCTF-2017-main_strip" class="md-nav__link">
+    hxpCTF-2017-main_strip
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="总结" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ctf-wiki/ctf-tools/blob/master/docs/binary_core_tools/instrumentation/intel_pin.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="intel-pin">intel pin<a class="headerlink" href="#intel-pin" title="Permanent link">&para;</a></h1>
+<h2 id="pin">什么是 pin<a class="headerlink" href="#pin" title="Permanent link">&para;</a></h2>
+<p>pin 是 intel 开发的一款二进制程序的插桩分析工具，支持 x86/x64 &amp; windows/linux/mac，提供了丰富的 API 供使用者用 C/C++ 编写 pintool 分析程序</p>
+<h3 id="instrument">什么是插桩(instrument)<a class="headerlink" href="#instrument" title="Permanent link">&para;</a></h3>
+<p>通俗的来说，插桩就是在已有的源代码/二进制程序中插入某些代码以便于自己分析，比如在调试时使用 printf 打印变量值就属于在源代码级别的插桩。而intel pin就是在二进制程序级别（没有源代码）插桩的一款工具</p>
+<h2 id="pin-pintool">pin 和 pintool<a class="headerlink" href="#pin-pintool" title="Permanent link">&para;</a></h2>
+<h3 id="pin-pintool_1">pin 的安装，pintool 的编译<a class="headerlink" href="#pin-pintool_1" title="Permanent link">&para;</a></h3>
+<p>pin 的安装很简单，这里以 64 位的 Linux 为例来说明，从 <a href="https://software.intel.com/en-us/articles/pin-a-binary-instrumentation-tool-downloads">官网</a> 上下载 pin 组件后，解压即可，在解压后的文件夹内有编译好的二进制程序 pin</p>
+<div class="codehilite"><pre><span></span>pin-3.6-gcc-linux ls
+doc  extlicense  extras  ia32  intel64  LICENSE  pin  README  redist.txt  <span class="nb">source</span>
+pin-3.6-gcc-linux file pin 
+pin: ELF <span class="m">32</span>-bit LSB executable, Intel <span class="m">80386</span>, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, BuildID<span class="o">[</span>sha1<span class="o">]=</span>7beaa83f9142955a6e933bf29d4a8aa1269298bc, stripped
+pin-3.6-gcc-linux ./pin 
+E: Missing application name
+Pin: pin-3.6-97554-31f0a167d
+Copyright <span class="o">(</span>c<span class="o">)</span> <span class="m">2003</span>-2017, Intel Corporation. All rights reserved.
+
+Usage: pin <span class="o">[</span>OPTION<span class="o">]</span> <span class="o">[</span>-t &lt;tool&gt; <span class="o">[</span>&lt;toolargs&gt;<span class="o">]]</span> -- &lt;<span class="nb">command</span> line&gt;
+Use -help <span class="k">for</span> a description of options
+</pre></div>
+
+<p>在 <strong>source/tools/ManualExamples</strong> 中有一些现成的 pintool 可以使用，基本涵盖了各个模块的用法，这里以 inscount0 这个 pintool 为例介绍 pin 的使用方法</p>
+<div class="codehilite"><pre><span></span>pin-3.6-gcc-linux <span class="nb">cd</span> source/tools/ManualExamples
+ManualExamples file inscount0.cpp
+inscount0.cpp: C source, ASCII text
+ManualExamples make obj-intel64/inscount0.so <span class="nv">TARGET</span><span class="o">=</span>intel64
+g++ -Wall -Werror -Wno-unknown-pragmas -D__PIN__<span class="o">=</span><span class="m">1</span> -DPIN_CRT<span class="o">=</span><span class="m">1</span> -fno-stack-protector -fno-exceptions -funwind-tables -fasynchronous-unwind-tables -fno-rtti -DTARGET_IA32E -DHOST_IA32E -fPIC -DTARGET_LINUX -fabi-version<span class="o">=</span><span class="m">2</span>  -I../../../source/include/pin -I../../../source/include/pin/gen -isystem /home/m4x/pin-3.6-gcc-linux/extras/stlport/include -isystem /home/m4x/pin-3.6-gcc-linux/extras/libstdc++/include -isystem /home/m4x/pin-3.6-gcc-linux/extras/crt/include -isystem /home/m4x/pin-3.6-gcc-linux/extras/crt/include/arch-x86_64 -isystem /home/m4x/pin-3.6-gcc-linux/extras/crt/include/kernel/uapi -isystem /home/m4x/pin-3.6-gcc-linux/extras/crt/include/kernel/uapi/asm-x86 -I../../../extras/components/include -I../../../extras/xed-intel64/include/xed -I../../../source/tools/InstLib -O3 -fomit-frame-pointer -fno-strict-aliasing   -c -o obj-intel64/inscount0.o inscount0.cpp
+g++ -shared -Wl,--hash-style<span class="o">=</span>sysv ../../../intel64/runtime/pincrt/crtbeginS.o -Wl,-Bsymbolic -Wl,--version-script<span class="o">=</span>../../../source/include/pin/pintool.ver -fabi-version<span class="o">=</span><span class="m">2</span>    -o obj-intel64/inscount0.so obj-intel64/inscount0.o  -L../../../intel64/runtime/pincrt -L../../../intel64/lib -L../../../intel64/lib-ext -L../../../extras/xed-intel64/lib -lpin -lxed ../../../intel64/runtime/pincrt/crtendS.o -lpin3dwarf  -ldl-dynamic -nostdlib -lstlport-dynamic -lm-dynamic -lc-dynamic -lunwind-dynamic
+ManualExamples file obj-intel64/inscount0.so 
+obj-intel64/inscount0.so: ELF <span class="m">64</span>-bit LSB shared object, x86-64, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, dynamically linked, BuildID<span class="o">[</span>sha1<span class="o">]=</span>3baa29dd54235acaab02edc94bf9ac377dd7b0e5, not stripped
+</pre></div>
+
+<p>此时在 obj-intel64 下编译生成了 inscount0.so，这个 so 即为一种 pintool，功能为记录程序执行的指令的条数；</p>
+<blockquote>
+<p>判断 pintool 的功能可以阅读 pintool 源代码或者使用下条指令</p>
+<p>$ pin -t your_pintool -h -- your_application</p>
+</blockquote>
+<p>类似的，要编译 32 位的 pintool 可以使用</p>
+<div class="codehilite"><pre><span></span>make obj-ia32/inscount0.so
+</pre></div>
+
+<p>编译 ManualExamples 中的所有 pintool 可以使用</p>
+<div class="codehilite"><pre><span></span>make all <span class="nv">TAEGET</span><span class="o">=</span>intel64
+make all <span class="nv">TAEGET</span><span class="o">=</span>ia32
+</pre></div>
+
+<h3 id="pin_1">pin 的使用<a class="headerlink" href="#pin_1" title="Permanent link">&para;</a></h3>
+<p>pin 的基本命令格式如下</p>
+<div class="codehilite"><pre><span></span>pin -t your_pintool -- your_binary &lt;arg&gt; 
+</pre></div>
+
+<p>以刚刚编译的 inscount0 这个 pintool 为例</p>
+<div class="codehilite"><pre><span></span>ManualExamples ../../../pin -t ./obj-intel64/inscount0.so -- /bin/ls -a
+.              inscount2.cpp      obj-intel64
+..             inscount.out   pinatrace.cpp
+buffer_linux.cpp       inscount_tls.cpp   pin.log
+buffer_windows.cpp     invocation.cpp     proccount.cpp
+countreps.cpp          isampling.cpp      replacesigprobed.cpp
+detach.cpp         itrace.cpp     safecopy.cpp
+divide_by_zero_unix.c  little_malloc.c    stack-debugger.cpp
+divide_by_zero_win.c   logtrace.cpp   stack-debugger-tutorial.sln
+emudiv.cpp         makefile       stack-debugger-tutorial.vcxproj
+fibonacci.cpp          makefile.rules     stack-debugger-tutorial.vcxproj.filters
+follow_child_app1.cpp  malloc.cpp     statica.cpp
+follow_child_app2.cpp  malloc_mt.cpp      staticcount.cpp
+follow_child_tool.cpp  malloctrace.cpp    strace.cpp
+fork_app.cpp           myInscount0.cpp    <span class="nb">test</span>
+fork_jit_tool.cpp      myInscount1.cpp    test.c
+imageload.cpp          myMalloctrace.cpp  test-packed
+inscount0.cpp          nonstatica.cpp     tracer.cpp
+inscount1.cpp          obj-ia32       w_malloctrace.cpp
+ManualExamples cat inscount.out 
+Count <span class="m">813449</span>
+</pre></div>
+
+<p>inscount 默认结果保存在 inscount.out 这个文件中，在上例中，即此时 <strong>ls -a</strong> 这条命令共执行了 813449 条指令</p>
+<h3 id="pintool">pintool 的分析<a class="headerlink" href="#pintool" title="Permanent link">&para;</a></h3>
+<p>同样以 inscount0 为例分析，查看 inscount0.cpp 的内容</p>
+<div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;pin.H&quot;</span><span class="cp"></span>
+
+<span class="n">ofstream</span> <span class="n">OutFile</span><span class="p">;</span>
+
+<span class="c1">// The running count of instructions is kept here</span>
+<span class="c1">// make it static to help the compiler optimize docount</span>
+<span class="k">static</span> <span class="n">UINT64</span> <span class="n">icount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// This function is called before every instruction is executed</span>
+<span class="n">VOID</span> <span class="nf">docount</span><span class="p">()</span> <span class="p">{</span> <span class="n">icount</span><span class="o">++</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// Pin calls this function every time a new instruction is encountered</span>
+<span class="n">VOID</span> <span class="nf">Instruction</span><span class="p">(</span><span class="n">INS</span> <span class="n">ins</span><span class="p">,</span> <span class="n">VOID</span> <span class="o">*</span><span class="n">v</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Insert a call to docount before every instruction, no arguments are passed</span>
+    <span class="n">INS_InsertCall</span><span class="p">(</span><span class="n">ins</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">docount</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">KNOB</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">KnobOutputFile</span><span class="p">(</span><span class="n">KNOB_MODE_WRITEONCE</span><span class="p">,</span> <span class="s">&quot;pintool&quot;</span><span class="p">,</span>
+    <span class="s">&quot;o&quot;</span><span class="p">,</span> <span class="s">&quot;inscount.out&quot;</span><span class="p">,</span> <span class="s">&quot;specify output file name&quot;</span><span class="p">);</span>
+
+<span class="c1">// This function is called when the application exits</span>
+<span class="n">VOID</span> <span class="nf">Fini</span><span class="p">(</span><span class="n">INT32</span> <span class="n">code</span><span class="p">,</span> <span class="n">VOID</span> <span class="o">*</span><span class="n">v</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Write to a file since cout and cerr maybe closed by the application</span>
+    <span class="n">OutFile</span><span class="p">.</span><span class="n">setf</span><span class="p">(</span><span class="n">ios</span><span class="o">::</span><span class="n">showbase</span><span class="p">);</span>
+    <span class="n">OutFile</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Count &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">icount</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">OutFile</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="cm">/* ===================================================================== */</span>
+<span class="cm">/* Print Help Message                                                    */</span>
+<span class="cm">/* ===================================================================== */</span>
+
+<span class="n">INT32</span> <span class="nf">Usage</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;This tool counts the number of dynamic instructions executed&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">KNOB_BASE</span><span class="o">::</span><span class="n">StringKnobSummary</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* ===================================================================== */</span>
+<span class="cm">/* Main                                                                  */</span>
+<span class="cm">/* ===================================================================== */</span>
+<span class="cm">/*   argc, argv are the entire command line: pin -t &lt;toolname&gt; -- ...    */</span>
+<span class="cm">/* ===================================================================== */</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="c1">// Initialize pin</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">PIN_Init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">))</span> <span class="k">return</span> <span class="n">Usage</span><span class="p">();</span>
+
+    <span class="n">OutFile</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">KnobOutputFile</span><span class="p">.</span><span class="n">Value</span><span class="p">().</span><span class="n">c_str</span><span class="p">());</span>
+
+    <span class="c1">// Register Instruction to be called to instrument instructions</span>
+    <span class="n">INS_AddInstrumentFunction</span><span class="p">(</span><span class="n">Instruction</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">// Register Fini to be called when the application exits</span>
+    <span class="n">PIN_AddFiniFunction</span><span class="p">(</span><span class="n">Fini</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">// Start the program, never returns</span>
+    <span class="n">PIN_StartProgram</span><span class="p">();</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>从 main 开始，首先调用了 PIN_init（53 行）进行初始化，然后使用 INS_AddInstrumenFunction 注册了一个插桩函数(58行)，根据 intel pin 的 <a href="https://software.intel.com/sites/landingpage/pintool/docs/97619/Pin/html/">用户手册</a></p>
+<div class="codehilite"><pre><span></span><span class="n">PIN_CALLBACK</span> <span class="n">LEVEL_PINCLIENT</span><span class="o">::</span><span class="n">INS_AddInstrumentFunction</span> <span class="p">(</span>   <span class="n">INS_INSTRUMENT_CALLBACK</span>     <span class="n">fun</span><span class="p">,</span>
+<span class="n">VOID</span> <span class="o">*</span>  <span class="n">val</span> 
+<span class="p">)</span>       
+<span class="n">Add</span> <span class="n">a</span> <span class="n">function</span> <span class="n">used</span> <span class="n">to</span> <span class="n">instrument</span> <span class="n">at</span> <span class="n">instruction</span> <span class="n">granularity</span>
+
+<span class="nl">Parameters</span><span class="p">:</span>
+<span class="n">fun</span> <span class="n">Instrumentation</span> <span class="n">function</span> <span class="k">for</span> <span class="n">instructions</span>
+<span class="n">val</span> <span class="n">passed</span> <span class="n">as</span> <span class="n">the</span> <span class="n">second</span> <span class="n">argument</span> <span class="n">to</span> <span class="n">the</span> <span class="n">instrumentation</span> <span class="n">function</span>
+<span class="nl">Returns</span><span class="p">:</span>
+<span class="n">PIN_CALLBACK</span> <span class="n">A</span> <span class="n">handle</span> <span class="n">to</span> <span class="n">a</span> <span class="n">callback</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">further</span> <span class="n">modify</span> <span class="n">this</span> <span class="n">callback</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">properties</span>
+<span class="nl">Note</span><span class="p">:</span>
+<span class="n">The</span> <span class="n">pin</span> <span class="n">client</span> <span class="n">lock</span> <span class="n">is</span> <span class="n">obtained</span> <span class="n">during</span> <span class="n">the</span> <span class="n">call</span> <span class="n">of</span> <span class="n">this</span> <span class="n">API</span><span class="p">.</span>
+<span class="nl">Availability</span><span class="p">:</span>
+<span class="nl">Mode</span><span class="p">:</span> <span class="n">JIT</span>
+<span class="n">O</span><span class="o">/</span><span class="nl">S</span><span class="p">:</span> <span class="n">Linux</span><span class="p">,</span> <span class="n">Windows</span> <span class="o">&amp;</span> <span class="n">OS</span> <span class="n">X</span><span class="o">*</span>
+<span class="nl">CPU</span><span class="p">:</span> <span class="n">All</span>
+</pre></div>
+
+<p>在这里该函数的作用是在指令粒度插入 Instruction 函数，即在每条指令执行前，都会进入 Instruction 这个函数中，其第2个参数为一个额外传递给 Instruction 的参数，即对应 <code>VOID *v</code> 这个参数，这里没有使用。而 Instruction 接受的第一个参数为 <code>INS</code> 结构，用来表示一条指令</p>
+<p>而我们再看 Instruction 这个函数</p>
+<div class="codehilite"><pre><span></span><span class="n">VOID</span> <span class="nf">Instruction</span><span class="p">(</span><span class="n">INS</span> <span class="n">ins</span><span class="p">,</span> <span class="n">VOID</span> <span class="o">*</span><span class="n">v</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Insert a call to docount before every instruction, no arguments are passed</span>
+    <span class="n">INS_InsertCall</span><span class="p">(</span><span class="n">ins</span><span class="p">,</span> <span class="n">IPOINT_BEFORE</span><span class="p">,</span> <span class="p">(</span><span class="n">AFUNPTR</span><span class="p">)</span><span class="n">docount</span><span class="p">,</span> <span class="n">IARG_END</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>在 Instruction 函数内部又使用 INS_InsertCall 注册了一个函数 docount，即在每条指令前实际插入了 docount 这个函数。需要注意的是 INS_InsertCall 试一个便餐函数，前三个参数分别为指令(ins)，插入的实际(IPOINT_BEFORE，表示在指令运行之前插入 docount 函数)，函数指针(docount，转化为了 AFUNPTR 类型)，之后的参数为传递给 docount 函数的参数，以 IARG_END 结尾</p>
+<p>而 docount 函数（12 行）的作用就很明显了，每次将一个全局变量加 1，因此此时 /bin/ls -a 运行的模式如下:</p>
+<div class="codehilite"><pre><span></span>...
+icount++;
+sub $0xff, %edx
+icount++;
+cmp %esi, %edx
+icount++;
+jle &lt;L1&gt;
+icount++;
+mov $0x1, %edi
+icount++;
+add $0x10, %eax
+...
+</pre></div>
+
+<p>所以 inscount0 的用途就很明显了，每条指令前都调用 docount 函数将全局变量 icount 自增，最后通过PIN_AddFiniFunction 函数注册的 Fini 函数(25行)将结果写到一个文件中。</p>
+<p>当这些函数都定义完后，就可以使用 PIN_StartProgram 来启动程序了</p>
+<p>这里分析了一个最简单的 pintool 例子，更多 pintool 例子的分析和其他函数的使用可以参考 BrieflyX 的 <a href="http://brieflyx.me/2017/binary-analysis/intel-pin-intro/">博客</a></p>
+<h2 id="pin-in-ctf">pin in CTF<a class="headerlink" href="#pin-in-ctf" title="Permanent link">&para;</a></h2>
+<p>因为动态插桩有不重新编译即可收集二进制程序某些信息的特性，因此用 pin 求解**一部分** CTF challenges 会异常的方便，下边给出一些例子和分析</p>
+<h3 id="ndh2k13-crackme-500">NDH2K13-crackme-500<a class="headerlink" href="#ndh2k13-crackme-500" title="Permanent link">&para;</a></h3>
+<p>首先用常规方法对 crackme 文件进行分析</p>
+<div class="codehilite"><pre><span></span>NDH2k13-crackme-500 <span class="o">[</span>master<span class="o">]</span> file crackme 
+crackme: ELF <span class="m">64</span>-bit LSB executable, x86-64, invalid version <span class="o">(</span>SYSV<span class="o">)</span>, <span class="k">for</span> GNU/Linux <span class="m">2</span>.6.9, statically linked, corrupted section header size
+NDH2k13-crackme-500 <span class="o">[</span>master<span class="o">]</span> nm ./crackme 
+
+nm: out of memory allocating <span class="m">109524665216</span> bytes after a total of <span class="m">0</span> bytes
+NDH2k13-crackme-500 <span class="o">[</span>master<span class="o">]</span> objdump -d ./crackme -M intel
+objdump: ./crackme: 不可识别的文件格式
+NDH2k13-crackme-500 <span class="o">[</span>master<span class="o">]</span> ./crackme 
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: <span class="nb">test</span>
+Bad password
+</pre></div>
+
+<p>发现 section header 受到了损坏，用 IDA 打开时也有很多报错，这时我们尝试使用 intel pin 来求解这道题目，先使用最常见的统计指令条数的方法</p>
+<div class="codehilite"><pre><span></span>NDH2k13-crackme-500 <span class="o">[</span>master<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./inscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;a&quot;</span> &gt;&gt; /dev/null<span class="p">;</span> cat inscount.out 
+Count <span class="m">160345</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;a&quot;</span> 
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">163218</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;aa&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">166014</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;aaa&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">168810</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;aaaa&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">171606</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;aaaaa&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">174402</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> bpython
+bpython version <span class="m">0</span>.17.1 on top of Python <span class="m">2</span>.7.13+ /usr/bin/python2
+&gt;&gt;&gt; <span class="m">174402</span> - <span class="nv">171606</span> <span class="o">==</span> <span class="m">171606</span> - <span class="nv">168810</span> <span class="o">==</span> <span class="m">168810</span> - <span class="nv">166014</span> <span class="o">==</span> <span class="m">166014</span> - <span class="m">163218</span>
+True
+&gt;&gt;&gt; 
+</pre></div>
+
+<p>此时我们发现了一个很有趣的特性，输入长度每次增加 1 时，指令条数也是以等差的规模递增的</p>
+<blockquote>
+<p>myInscount0 是我在 inscount0 的基础上更改的 pintool，实现了从结果保存到文件到结果输出到标准输出的修改</p>
+</blockquote>
+<p>我们写一个简单的脚本查看输入长度递增时，指令条数的变化规律</p>
+<div class="codehilite"><pre><span></span><span class="n">NDH2k13</span><span class="o">-</span><span class="n">crackme</span><span class="o">-</span><span class="mi">500</span> <span class="p">[</span><span class="n">master</span><span class="err">●</span><span class="p">]</span> <span class="n">cat</span> <span class="n">guessLen</span><span class="o">.</span><span class="n">py</span> 
+<span class="c1">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+<span class="kn">import</span> <span class="nn">string</span>
+
+<span class="n">pinPath</span> <span class="o">=</span> <span class="s2">&quot;/home/m4x/pin-3.6-gcc-linux/pin&quot;</span>
+<span class="n">pinInit</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">tool</span><span class="p">,</span> <span class="n">elf</span><span class="p">:</span> <span class="n">Popen</span><span class="p">([</span><span class="n">pinPath</span><span class="p">,</span> <span class="s1">&#39;-t&#39;</span><span class="p">,</span> <span class="n">tool</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">elf</span><span class="p">],</span> <span class="n">stdin</span> <span class="o">=</span> <span class="n">PIPE</span><span class="p">,</span> <span class="n">stdout</span> <span class="o">=</span> <span class="n">PIPE</span><span class="p">)</span>
+<span class="n">pinWrite</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">cont</span><span class="p">:</span> <span class="n">pin</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cont</span><span class="p">)</span>
+<span class="n">pinRead</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="n">pin</span><span class="o">.</span><span class="n">communicate</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">):</span>
+        <span class="n">pin</span> <span class="o">=</span> <span class="n">pinInit</span><span class="p">(</span><span class="s2">&quot;./myInscount0.so&quot;</span><span class="p">,</span> <span class="s2">&quot;./crackme&quot;</span><span class="p">)</span>
+        <span class="n">pinWrite</span><span class="p">(</span><span class="s2">&quot;a&quot;</span> <span class="o">*</span> <span class="n">i</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">now</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pinRead</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;Count: &quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="k">print</span> <span class="s2">&quot;inputLen({:2d}) -&gt; ins({}) -&gt; delta({})&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">now</span><span class="p">,</span> <span class="n">now</span> <span class="o">-</span> <span class="n">last</span><span class="p">)</span>
+        <span class="n">last</span> <span class="o">=</span> <span class="n">now</span>
+</pre></div>
+
+<p>在我电脑上运行结果如下：</p>
+<div class="codehilite"><pre><span></span><span class="n">NDH2k13</span><span class="o">-</span><span class="n">crackme</span><span class="o">-</span><span class="mi">500</span> <span class="p">[</span><span class="n">master</span><span class="err">●</span><span class="p">]</span> <span class="n">python</span> <span class="n">guessLen</span><span class="o">.</span><span class="n">py</span> 
+<span class="n">inputLen</span><span class="p">(</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">160307</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">160307</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">163103</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span> <span class="mi">3</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">165899</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span> <span class="mi">4</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">168695</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span> <span class="mi">5</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">171491</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span> <span class="mi">6</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">174287</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span> <span class="mi">7</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">177083</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span> <span class="mi">8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">182804</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">5721</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span> <span class="mi">9</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">182676</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="o">-</span><span class="mi">128</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">185472</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">188268</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">191064</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">193860</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">196656</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">199452</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">202248</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">205044</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">207840</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">210636</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">213432</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">216228</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">219024</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">221820</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">224616</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">227412</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">230208</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">2796</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">244188</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">13980</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">28</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">244188</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">inputLen</span><span class="p">(</span><span class="mi">29</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ins</span><span class="p">(</span><span class="mi">244188</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">delta</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+<p>可以发现，在输入长度 &lt;8 时，指令条数是递增的，但长度为 8 与长度为 7 比较发生了突变，这个时候我们就可以大胆的推测当输入长度为 8 时，程序的运行流程有了较大的变化，正确的 flag 长度即为 8</p>
+<p>我们以输入长度是 8 为前提，再查看不同输入下指令条数的变化规律</p>
+<div class="codehilite"><pre><span></span>NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;&gt;???????&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">185714</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;????????&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">185714</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;@???????&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">185714</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;A???????&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">189752</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;B???????&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">185714</span>
+NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount0.so -- ./crackme <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;C???????&quot;</span>
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: Bad password
+Count: <span class="m">185714</span>
+</pre></div>
+
+<p>可以发现，输入以 ASCII码 顺序递增时，第一位为 A 时指令条数发生了变化，此时我们在进一步推测正确的 flag 第一位即为 A</p>
+<p>再写一个脚本逐位爆破</p>
+<div class="codehilite"><pre><span></span><span class="n">NDH2k13</span><span class="o">-</span><span class="n">crackme</span><span class="o">-</span><span class="mi">500</span> <span class="p">[</span><span class="n">master</span><span class="err">●</span><span class="p">]</span> <span class="n">cat</span> <span class="n">guessPWD</span><span class="o">.</span><span class="n">py</span> 
+<span class="c1">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">Popen</span><span class="p">,</span> <span class="n">PIPE</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">pdb</span>
+
+<span class="n">pinPath</span> <span class="o">=</span> <span class="s2">&quot;/home/m4x/pin-3.6-gcc-linux/pin&quot;</span>
+<span class="n">pinInit</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">tool</span><span class="p">,</span> <span class="n">elf</span><span class="p">:</span> <span class="n">Popen</span><span class="p">([</span><span class="n">pinPath</span><span class="p">,</span> <span class="s1">&#39;-t&#39;</span><span class="p">,</span> <span class="n">tool</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">elf</span><span class="p">],</span> <span class="n">stdin</span> <span class="o">=</span> <span class="n">PIPE</span><span class="p">,</span> <span class="n">stdout</span> <span class="o">=</span> <span class="n">PIPE</span><span class="p">)</span>
+<span class="n">pinWrite</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">cont</span><span class="p">:</span> <span class="n">pin</span><span class="o">.</span><span class="n">stdin</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">cont</span><span class="p">)</span>
+<span class="n">pinRead</span> <span class="o">=</span> <span class="k">lambda</span> <span class="p">:</span> <span class="n">pin</span><span class="o">.</span><span class="n">communicate</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1">#  dic = map(chr, xrange(0x20, 0x80))</span>
+    <span class="n">dic</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span> <span class="o">+</span> <span class="s2">&quot;+_ &quot;</span>
+    <span class="n">pwd</span> <span class="o">=</span> <span class="s1">&#39;?&#39;</span> <span class="o">*</span> <span class="mi">8</span>
+    <span class="n">dicIdx</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">pwdIdx</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">pwd</span> <span class="o">=</span> <span class="n">pwd</span><span class="p">[:</span> <span class="n">pwdIdx</span><span class="p">]</span> <span class="o">+</span> <span class="n">dic</span><span class="p">[</span><span class="n">dicIdx</span><span class="p">]</span> <span class="o">+</span> <span class="n">pwd</span><span class="p">[</span><span class="n">pwdIdx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span> <span class="p">]</span>
+        <span class="c1">#  pdb.set_trace()</span>
+        <span class="n">pin</span> <span class="o">=</span> <span class="n">pinInit</span><span class="p">(</span><span class="s2">&quot;./myInscount1.so&quot;</span><span class="p">,</span> <span class="s2">&quot;./crackme&quot;</span><span class="p">)</span>
+        <span class="n">pinWrite</span><span class="p">(</span><span class="n">pwd</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">now</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pinRead</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;Count: &quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="k">print</span> <span class="s2">&quot;input({}) -&gt; now({}) -&gt; delta({})&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pwd</span><span class="p">,</span> <span class="n">now</span><span class="p">,</span> <span class="n">now</span> <span class="o">-</span> <span class="n">last</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">now</span> <span class="o">-</span> <span class="n">last</span> <span class="o">&gt;</span> <span class="mi">2000</span> <span class="ow">and</span> <span class="n">dicIdx</span><span class="p">:</span>
+            <span class="n">pwdIdx</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">dicIdx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">if</span> <span class="n">pwdIdx</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pwd</span><span class="p">):</span>
+                <span class="k">print</span> <span class="s2">&quot;Found pwd: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pwd</span><span class="p">)</span>
+                <span class="k">break</span>
+
+        <span class="n">dicIdx</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">last</span> <span class="o">=</span> <span class="n">now</span>
+</pre></div>
+
+<p>运行结果如下</p>
+<div class="codehilite"><pre><span></span>NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> <span class="nb">time</span> python guessPWD.py 
+input<span class="o">(</span>a???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">182804</span><span class="o">)</span>
+input<span class="o">(</span>b???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>c???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>d???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>e???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>f???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>g???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>h???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>i???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>j???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>k???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>l???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>m???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>n???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>o???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>p???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>q???????<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">182804</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+......
+input<span class="o">(</span>AzI0wBsO<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">211070</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>AzI0wBsP<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">211069</span><span class="o">)</span> -&gt; delta<span class="o">(</span>-1<span class="o">)</span>
+input<span class="o">(</span>AzI0wBsQ<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">211069</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>AzI0wBsR<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">211069</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>AzI0wBsS<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">211069</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>AzI0wBsT<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">211069</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>AzI0wBsU<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">211069</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>AzI0wBsV<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">211069</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>AzI0wBsW<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">211069</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">0</span><span class="o">)</span>
+input<span class="o">(</span>AzI0wBsX<span class="o">)</span> -&gt; now<span class="o">(</span><span class="m">214976</span><span class="o">)</span> -&gt; delta<span class="o">(</span><span class="m">3907</span><span class="o">)</span>
+Found pwd: AzI0wBsX
+python guessPWD.py  <span class="m">31</span>.04s user <span class="m">14</span>.72s system <span class="m">105</span>% cpu <span class="m">43</span>.341 total
+</pre></div>
+
+<p>验证一下</p>
+<div class="codehilite"><pre><span></span>NDH2k13-crackme-500 <span class="o">[</span>master●<span class="o">]</span> ./crackme 
+Jonathan Salwan loves you &lt;<span class="m">3</span>
+----------------------------
+
+Password: AzI0wBsX
+Good password
+</pre></div>
+
+<p>这样，我们用不到 5 分钟的时间就猜出了 flag</p>
+<blockquote>
+<p>inscount1(BB级插桩) 与 inscount0(ins级插桩) 效果相同，但 inscount1 速度更快，实际解题时可以用 inscount1 代替 inscount0</p>
+</blockquote>
+<h3 id="hxpctf-2017-main_strip">hxpCTF-2017-main_strip<a class="headerlink" href="#hxpctf-2017-main_strip" title="Permanent link">&para;</a></h3>
+<p>再以 hxpCTF2017 的一道题目演示改造 pintool 用于解题，我们着重演示改造 pintool 的步骤，因此恢复符号表和分析程序流程的部分可以参考这篇 <a href="http://eternal.red/2017/dont_panic-writeup/">writeup</a></p>
+<p>我们先尝试用上例的方法解这道题目</p>
+<div class="codehilite"><pre><span></span>hxpCTF-2017-main_strip <span class="o">[</span>master●●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount1.so -- ./main_strip a
+Nope.
+Count: <span class="m">517715</span>
+hxpCTF-2017-main_strip <span class="o">[</span>master●●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount1.so -- ./main_strip a 
+Nope.
+Count: <span class="m">545828</span>
+hxpCTF-2017-main_strip <span class="o">[</span>master●●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount1.so -- ./main_strip a
+Nope.
+Count: <span class="m">532656</span>
+hxpCTF-2017-main_strip <span class="o">[</span>master●●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount1.so -- ./main_strip a
+Nope.
+Count: <span class="m">524544</span>
+hxpCTF-2017-main_strip <span class="o">[</span>master●●<span class="o">]</span> ~/pin-3.6-gcc-linux/pin -t ./myInscount1.so -- ./main_strip a
+Nope.
+Count: <span class="m">582401</span>
+</pre></div>
+
+<p>很不幸，即使我们使用同一个输入，指令数也是有较大变化的，使用现有的 pintool 难以解出这道题目，我们进行更深一步的分析，验证 flag 的关键部分可以表示为如下代码</p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">(</span><span class="n">provided_flag</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">main_mapanic</span><span class="p">(</span><span class="n">provided_flag</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">!=</span> <span class="n">constant_binary_blob</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="p">{</span>
+        <span class="n">bad_boy</span><span class="p">();</span>
+        <span class="n">exit</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">goodboy</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>可以看出判断相等是逐位进行的，因此可以考虑对 inscount0 的 docount 函数做如下更改</p>
+<div class="codehilite"><pre><span></span><span class="err">更改前：</span>
+<span class="n">VOID</span> <span class="n">docount</span><span class="p">()</span> <span class="p">{</span> <span class="n">icount</span><span class="o">++</span><span class="p">;</span> <span class="p">}</span>
+<span class="err">更改后：</span>
+<span class="n">VOID</span> <span class="n">docount</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">ip</span><span class="p">)</span> 
+<span class="p">{</span>
+    <span class="c1">// .text:000000000047B96E  cmp al, cl; cmp mapanic(provided_flag[i]), constant_binary_blob[i]</span>
+    <span class="k">if</span> <span class="p">((</span><span class="kt">long</span> <span class="kt">long</span> <span class="kt">int</span><span class="p">)</span><span class="n">ip</span> <span class="o">==</span> <span class="mh">0x000000000047B96E</span><span class="p">)</span>
+     <span class="n">icount</span><span class="o">++</span><span class="p">;</span> 
+<span class="p">}</span>
+</pre></div>
+
+<p>只有运行到 0x47B96E 一句才会计数，这样我们就可以根据 pintool 的结果来逐位爆破 flag 了</p>
+<blockquote>
+<p>然而，因为该题目的指令较多，指令级别的插桩会耗费较长时间，需要1h左右才能得到 flag</p>
+</blockquote>
+<h2 id="_1">总结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>使用 intel pin 可以解一部分 CTF challenges，尤其是虚拟机或者混淆严重的逆向题目，但 pin 的用途绝不局限于求解 CTF challenges</li>
+<li>使用 pin 可以解一部分 CTF 题目，但也仅仅是一部分题目，多数题目由于插桩代价大，难以提取侧信道信息，pintool 难以编写等原因使用 pin 求解得不偿失，因此使用 pin 求解 CTF challenges 可以总结为下条原则：<ul>
+<li>能用血赚，凉了不亏</li>
+</ul>
+</li>
+</ul>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/">http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/</a></li>
+<li><a href="http://brieflyx.me/2017/binary-analysis/intel-pin-intro/">http://brieflyx.me/2017/binary-analysis/intel-pin-intro/</a></li>
+<li><a href="http://eternal.red/2017/dont_panic-writeup/">http://eternal.red/2017/dont_panic-writeup/</a></li>
+<li><a href="https://github.com/M4xW4n9/slides/blob/master/auto/04-PinTutorial.pdf">https://github.com/M4xW4n9/slides/blob/master/auto/04-PinTutorial.pdf</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 CTF Wiki Team
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.a59e2a89.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.4",url:{base:"../../.."}})</script>
+      
+        <script src="../../../_static/js/extra.js"></script>
+      
+        <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
