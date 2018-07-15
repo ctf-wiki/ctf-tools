@@ -10,8 +10,7 @@ pin 是 intel 开发的一款二进制程序的插桩分析工具，支持 x86/x
 
 ## pin 和 pintool
 
-### pin 的安装，pintool 的编译
-
+### pin 的安装，pintool 的编译 
 pin 的安装很简单，这里以 64 位的 Linux 为例来说明，从 [官网](https://software.intel.com/en-us/articles/pin-a-binary-instrumentation-tool-downloads) 上下载 pin 组件后，解压即可，在解压后的文件夹内有编译好的二进制程序 pin
 
 ```bash
@@ -560,6 +559,8 @@ VOID docount(void *ip)
 
 >   然而，因为该题目的指令较多，指令级别的插桩会耗费较长时间，需要1h左右才能得到 flag
 
+## 题目
+- xman2018选拔赛-ollvm
 
 
 ##　总结
@@ -573,11 +574,4 @@ VOID docount(void *ip)
 -   http://shell-storm.org/blog/A-binary-analysis-count-me-if-you-can/
 -   http://brieflyx.me/2017/binary-analysis/intel-pin-intro/
 -   http://eternal.red/2017/dont_panic-writeup/
--   https://github.com/M4xW4n9/slides/blob/master/auto/04-PinTutorial.pdf
-
-
-
-
-
-
-
+-   https://github.com/0x01f/pin-in-CTF
