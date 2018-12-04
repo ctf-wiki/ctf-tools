@@ -37,7 +37,10 @@ pages:
     - Instrumentation:
       - Intel pin: binary_core_tools/instrumentation/intel_pin.md
     - Virtualization:
-      - qemu: binary_core_tools/virtualization/qemu.md
+      - qemu: 
+        - qemu 介绍: binary_core_tools/virtualization/qemu/qemu-introduction.md
+        - qemu 安装与调试: binary_core_tools/virtualization/qemu/qemu-install-and-debug.md
+        - qemu 细节: binary_core_tools/virtualization/qemu/qemu-internals.md
   # - Windows Binary:
     # - Disassembler and Decomplier:
       # - IDA: windows_binary_related/disassembler_and_decomplier/ida.md
