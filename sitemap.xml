@@ -2,12 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://ctf-wiki.github.io/ctf-tools/binary_core_tools/instrumentation/intel_pin/</loc>
-     <lastmod>2018-12-03</lastmod>
+     <lastmod>2018-12-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://ctf-wiki.github.io/ctf-tools/binary_core_tools/virtualization/qemu/</loc>
-     <lastmod>2018-12-03</lastmod>
+     <loc>https://ctf-wiki.github.io/ctf-tools/binary_core_tools/virtualization/qemu/qemu-introduction/</loc>
+     <lastmod>2018-12-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://ctf-wiki.github.io/ctf-tools/binary_core_tools/virtualization/qemu/qemu-install-and-debug/</loc>
+     <lastmod>2018-12-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://ctf-wiki.github.io/ctf-tools/binary_core_tools/virtualization/qemu/qemu-internals/</loc>
+     <lastmod>2018-12-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

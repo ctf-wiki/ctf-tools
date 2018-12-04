@@ -13,7 +13,7 @@
         <meta name="description" content="CTF 军火库">
       
       
-        <link rel="canonical" href="https://ctf-wiki.github.io/ctf-tools/binary_core_tools/virtualization/qemu/">
+        <link rel="canonical" href="https://ctf-wiki.github.io/ctf-tools/binary_core_tools/virtualization/qemu/qemu-install-and-debug/">
       
       
         <meta name="author" content="CTF Wiki Team">
@@ -37,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
-      <link rel="shortcut icon" href="../../../_static/img/favicon.png">
+      <link rel="shortcut icon" href="../../../../_static/img/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
     
     
       
-        <title>qemu - CTF Tools</title>
+        <title>qemu 安装与调试 - CTF Tools</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.11e41852.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.11e41852.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../../../assets/javascripts/modernizr.20ef595d.js"></script>
+      <script src="../../../../assets/javascripts/modernizr.20ef595d.js"></script>
     
     
       
@@ -66,7 +66,7 @@
         <style>body,input{font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Fira Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
     
     
     
@@ -131,7 +131,7 @@
                 CTF Tools
               </span>
               <span class="md-header-nav__topic">
-                qemu
+                qemu 安装与调试
               </span>
             
           
@@ -218,7 +218,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../instrumentation/intel_pin/" title="Binary Core Tools" class="md-tabs__link">
+        <a href="../../../instrumentation/intel_pin/" title="Binary Core Tools" class="md-tabs__link">
           Binary Core Tools
         </a>
       
@@ -319,7 +319,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../instrumentation/intel_pin/" title="Intel pin" class="md-nav__link">
+    <a href="../../../instrumentation/intel_pin/" title="Intel pin" class="md-nav__link">
       Intel pin
     </a>
   </li>
@@ -358,17 +358,50 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1-2-1" type="checkbox" id="nav-1-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-1-2-1">
+      qemu
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-1-2-1">
+        qemu
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../qemu-introduction/" title="qemu 介绍" class="md-nav__link">
+      qemu 介绍
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        qemu
+        qemu 安装与调试
       </label>
     
-    <a href="./" title="qemu" class="md-nav__link md-nav__link--active">
-      qemu
+    <a href="./" title="qemu 安装与调试" class="md-nav__link md-nav__link--active">
+      qemu 安装与调试
     </a>
     
       
@@ -380,47 +413,7 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qemu" title="什么是 qemu" class="md-nav__link">
-    什么是 qemu
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" title="运行模式" class="md-nav__link">
-    运行模式
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#user-mode-emulation" title="User-mode emulation" class="md-nav__link">
-    User-mode emulation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-emulation" title="System emulation" class="md-nav__link">
-    System emulation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qemu_1" title="安装 qemu" class="md-nav__link">
+  <a href="#qemu" title="安装 qemu" class="md-nav__link">
     安装 qemu
   </a>
   
@@ -428,14 +421,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" title="使用包管理" class="md-nav__link">
+  <a href="#_1" title="使用包管理" class="md-nav__link">
     使用包管理
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" title="从源码编译" class="md-nav__link">
+  <a href="#_2" title="从源码编译" class="md-nav__link">
     从源码编译
   </a>
   
@@ -447,7 +440,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#qemu_2" title="使用 qemu" class="md-nav__link">
+  <a href="#qemu_1" title="使用 qemu" class="md-nav__link">
     使用 qemu
   </a>
   
@@ -462,14 +455,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#qemu_3" title="调试 qemu" class="md-nav__link">
+  <a href="#qemu_2" title="调试 qemu" class="md-nav__link">
     调试 qemu
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#qemu_4" title="调试 qemu 中的进程" class="md-nav__link">
+  <a href="#qemu_3" title="调试 qemu 中的进程" class="md-nav__link">
     调试 qemu 中的进程
   </a>
   
@@ -481,22 +474,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="设备模拟" class="md-nav__link">
-    设备模拟
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="内存分配" class="md-nav__link">
-    内存分配
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" title="Reference" class="md-nav__link">
-    Reference
+  <a href="#references" title="References" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -509,6 +488,23 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../qemu-internals/" title="qemu 细节" class="md-nav__link">
+      qemu 细节
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -541,47 +537,7 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qemu" title="什么是 qemu" class="md-nav__link">
-    什么是 qemu
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" title="运行模式" class="md-nav__link">
-    运行模式
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#user-mode-emulation" title="User-mode emulation" class="md-nav__link">
-    User-mode emulation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-emulation" title="System emulation" class="md-nav__link">
-    System emulation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qemu_1" title="安装 qemu" class="md-nav__link">
+  <a href="#qemu" title="安装 qemu" class="md-nav__link">
     安装 qemu
   </a>
   
@@ -589,14 +545,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" title="使用包管理" class="md-nav__link">
+  <a href="#_1" title="使用包管理" class="md-nav__link">
     使用包管理
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" title="从源码编译" class="md-nav__link">
+  <a href="#_2" title="从源码编译" class="md-nav__link">
     从源码编译
   </a>
   
@@ -608,7 +564,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#qemu_2" title="使用 qemu" class="md-nav__link">
+  <a href="#qemu_1" title="使用 qemu" class="md-nav__link">
     使用 qemu
   </a>
   
@@ -623,14 +579,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#qemu_3" title="调试 qemu" class="md-nav__link">
+  <a href="#qemu_2" title="调试 qemu" class="md-nav__link">
     调试 qemu
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#qemu_4" title="调试 qemu 中的进程" class="md-nav__link">
+  <a href="#qemu_3" title="调试 qemu 中的进程" class="md-nav__link">
     调试 qemu 中的进程
   </a>
   
@@ -642,22 +598,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" title="设备模拟" class="md-nav__link">
-    设备模拟
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="内存分配" class="md-nav__link">
-    内存分配
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" title="Reference" class="md-nav__link">
-    Reference
+  <a href="#references" title="References" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -678,25 +620,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/ctf-wiki/ctf-tools/blob/master/docs/binary_core_tools/virtualization/qemu.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/ctf-wiki/ctf-tools/blob/master/docs/binary_core_tools/virtualization/qemu/qemu-install-and-debug.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>qemu</h1>
+                  <h1>qemu 安装与调试</h1>
                 
-                <h2 id="qemu">什么是 qemu<a class="headerlink" href="#qemu" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.qemu.org/">qemu</a> 是一款由 <a href="https://bellard.org/">Fabrice Bellard</a> 等人编写的可以执行硬件虚拟化的开源托管虚拟机，具有运行速度快（配合 kvm），跨平台等优点。</p>
-<p>qemu 通过动态的二进制转化模拟 CPU，并且提供一组设备模型，使其能够运行多种未修改的客户机OS。</p>
-<h3 id="_1">运行模式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<p>qemu 有多种运行模式，常用的有 <code>User-mode emulation</code> 和 <code>System emulation</code> 两种。</p>
-<h4 id="user-mode-emulation">User-mode emulation<a class="headerlink" href="#user-mode-emulation" title="Permanent link">&para;</a></h4>
-<p>用户模式，在这个模式下，qemu 可以运行单个其他指令集的 linux 或者 macOS/darwin 程序，<strong>允许了为一种架构编译的程序在另外一种架构上面运行</strong>。</p>
-<h4 id="system-emulation">System emulation<a class="headerlink" href="#system-emulation" title="Permanent link">&para;</a></h4>
-<p>系统模式，在这个模式下，qemu 将模拟一个完整的计算机系统，包括外围设备。</p>
-<blockquote>
-<p>之后将分别为两种情况举例</p>
-</blockquote>
-<h2 id="qemu_1">安装 qemu<a class="headerlink" href="#qemu_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">使用包管理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+                <h2 id="qemu">安装 qemu<a class="headerlink" href="#qemu" title="Permanent link">&para;</a></h2>
+<h3 id="_1">使用包管理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>一般情况下，如无特殊需要（如为了运行某个 CTF 比赛中的异架构程序或者 kernel）直接使用对应的包管理直接安装即可
 <div class="codehilite"><pre><span></span>    Arch: pacman -S qemu
 
@@ -713,7 +643,7 @@
 <blockquote>
 <p>这里只说明在 linux 下的安装过程，其他系统的安装过程请参考 <a href="https://www.qemu.org/download/">官方网站</a></p>
 </blockquote>
-<h3 id="_3">从源码编译<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_2">从源码编译<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>通过包管理安装的 qemu 版本一般较老，如果需要新版的 qemu，可以从源码编译，这里以编译最新版的 qemu 为例。</p>
 <div class="codehilite"><pre><span></span>wget https://download.qemu.org/qemu-3.1.0-rc3.tar.xz
 tar xvJf qemu-3.1.0-rc3.tar.xz
@@ -736,7 +666,7 @@ make -j8
 qemu-arm version <span class="m">3</span>.0.93
 Copyright <span class="o">(</span>c<span class="o">)</span> <span class="m">2003</span>-2018 Fabrice Bellard and the QEMU Project developers
 </pre></div></p>
-<h2 id="qemu_2">使用 qemu<a class="headerlink" href="#qemu_2" title="Permanent link">&para;</a></h2>
+<h2 id="qemu_1">使用 qemu<a class="headerlink" href="#qemu_1" title="Permanent link">&para;</a></h2>
 <p>以 CISCN 2017 的 <a href="https://github.com/ctf-wiki/ctf-challenges/tree/master/pwn/kernel/CISCN2017-babydriver">babydriver</a> 举例，查看启动脚本</p>
 <p><div class="codehilite"><pre><span></span>CISCN2017_babydriver <span class="o">[</span>master●<span class="o">]</span> bat boot.sh 
 ───────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -850,12 +780,12 @@ Input ~ <span class="k">if</span> you want to quit
 <li>调试 qemu 这个进程</li>
 <li>调试 qemu 内运行的程序</li>
 </ol>
-<h3 id="qemu_3">调试 qemu<a class="headerlink" href="#qemu_3" title="Permanent link">&para;</a></h3>
+<h3 id="qemu_2">调试 qemu<a class="headerlink" href="#qemu_2" title="Permanent link">&para;</a></h3>
 <p>对于第一种情况，直接使用 gdb attach 到 qemu 的进程号即可，为了调试时方便可以在编译时加上 <code>--enable-debug</code> 选项以保留符号等信息。
 <div class="codehilite"><pre><span></span>  --enable-debug           enable common debug build options
 </pre></div>
 在之后的 qemu 逃逸中会着重介绍这个过程。</p>
-<h3 id="qemu_4">调试 qemu 中的进程<a class="headerlink" href="#qemu_4" title="Permanent link">&para;</a></h3>
+<h3 id="qemu_3">调试 qemu 中的进程<a class="headerlink" href="#qemu_3" title="Permanent link">&para;</a></h3>
 <p>qemu 提供了 gdb 的接口，通过 <code>-g</code> 指定端口来调用
 <div class="codehilite"><pre><span></span>-g port              QEMU_GDB          wait gdb connection to &#39;port&#39;
 </pre></div></p>
@@ -885,13 +815,7 @@ pwndbg&gt; target remote localhost:1234
 <p><code>-gdb</code> 作用类似 <code>-g</code>，使用 <code>-gdb tcp::1234</code> 即可在 gdb 中通过 1234 端口调试。</p>
 <p><code>-s</code> 是 <code>-gdb tcp::1234</code> 的缩写</p>
 <p><code>-S</code> 让虚拟机停在启动的地方方便调试，类似于 pwntools 的 <a href="http://docs.pwntools.com/en/stable/gdb.html?highlight=gdb.debug#pwnlib.gdb.debug">gdb.debug()</a></p>
-<h2 id="_4">设备模拟<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h2 id="_5">内存分配<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
-<p><a href="https://wiki.qemu.org/Main_Page">https://wiki.qemu.org/Main_Page</a></p>
-<p><a href="https://qemu.weilnetz.de/doc/qemu-doc.html">https://qemu.weilnetz.de/doc/qemu-doc.html</a></p>
-<p><a href="https://wiki.qemu.org/Documentation">https://wiki.qemu.org/Documentation</a></p>
-<p><a href="https://en.wikipedia.org/wiki/QEMU">https://en.wikipedia.org/wiki/QEMU</a></p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <p><a href="https://www.ringzerolabs.com/2018/03/the-wonderful-world-of-mips.html">https://www.ringzerolabs.com/2018/03/the-wonderful-world-of-mips.html</a></p>
                 
                   
@@ -913,7 +837,7 @@ pwndbg&gt; target remote localhost:1234
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../instrumentation/intel_pin/" title="Intel pin" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../qemu-introduction/" title="qemu 介绍" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -922,11 +846,25 @@ pwndbg&gt; target remote localhost:1234
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                Intel pin
+                qemu 介绍
               </span>
             </div>
           </a>
         
+        
+          <a href="../qemu-internals/" title="qemu 细节" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                qemu 细节
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
@@ -954,28 +892,28 @@ pwndbg&gt; target remote localhost:1234
       
     </div>
     
-      <script src="../../../assets/javascripts/application.9e1f3b71.js"></script>
+      <script src="../../../../assets/javascripts/application.9e1f3b71.js"></script>
       
         
         
           
-          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="../../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
-                <script src="../../../assets/javascripts/lunr/tinyseg.js"></script>
+                <script src="../../../../assets/javascripts/lunr/tinyseg.js"></script>
               
               
-                <script src="../../../assets/javascripts/lunr/lunr.jp.js"></script>
+                <script src="../../../../assets/javascripts/lunr/lunr.jp.js"></script>
               
             
           
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       
-        <script src="../../../_static/js/extra.js"></script>
+        <script src="../../../../_static/js/extra.js"></script>
       
         <script src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
