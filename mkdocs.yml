@@ -13,7 +13,7 @@ edit_uri: 'blob/master/docs/'
 copyright: 'Copyright &copy; 2016 - 2018 CTF Wiki Team'
 
 # Contents
-pages:
+nav:
   - CTF Tools:
     - Getting started 开始使用: index.md
     - Collections 工具合集: collections.md
@@ -24,87 +24,6 @@ pages:
     - Pwn 二进制漏洞挖掘: pwn.md
     - Web 网站应用: web.md
     - Papers 会议: papers.md
-  - Web Tools:
-    - Basic Tools:
-      - Wireshark: web_tools/wireshark.md
-      - Burp Suite: web_tools/burpsuite.md
-      - Fiddler: web_tools/fiddle.md
-  - Binary Core Tools:
-    - File Structure:
-      - 010 Editor: binary_core_tools/file_structure/010editor.md
-    - Debugger:
-      - IDA: binary_core_tools/debugger/ida.md
-    - Instrumentation:
-      - Intel pin: binary_core_tools/instrumentation/intel_pin.md
-    - Virtualization:
-      - qemu: 
-        - qemu 介绍: binary_core_tools/virtualization/qemu/qemu-introduction.md
-        - qemu 安装与调试: binary_core_tools/virtualization/qemu/qemu-install-and-debug.md
-        - qemu 细节: binary_core_tools/virtualization/qemu/qemu-internals.md
-  - Windows Binary:
-    - Disassembler and Decomplier:
-      - IDA: windows_binary_related/disassembler_and_decomplier/ida.md
-      - Radare2/Cutter: windows_binary_related/disassembler_and_decomplier/radare2_and_cutter.md
-      - Hopper: windows_binary_related/disassembler_and_decomplier/hopper.md
-    - Debugger:
-      - OllyDbg: windows_binary_related/debugger/ollydbg.md
-      - WinDbg: windows_binary_related/debugger/windbg.md
-      - x32/x64 Debugger: windows_binary_related/debugger/x32_x64_debugger.md
-      - Immunity Debugger: windows_binary_related/debugger/immunity_debugger.md
-      - Cheat Engine: windows_binary_related/debugger/cheat_engine.md
-    - PE工具类:
-      - ExeInfo: windows_binary_related/PE工具类/exeinfo.md
-      - PEiD: windows_binary_related/PE工具类/importrec.md
-      - DIE: 
-      - ImportREC: unfinished.md
-      - Lord PE: unfinished.md
-      - Stud_PE: unfinished.md
-    - .NET类:
-      - dnSpy: unfinished.md
-      - de4dot: unfinished.md
-    - 系统工具:
-      - procexp: unfinished.md
-      - procmon: unfinished.md
-  - Linux Binary:
-    - Basic Tools:
-      - gdb, 以及各种插件: unfinished.md
-      - pwntools: unfinished.md
-    - linux-inject: unfinished.md
-  - Android:
-    - 开发:
-      - Android Studio: unfinished.md
-      - DDMS: unfinished.md
-    - 基本工具:
-      - Android 逆向助手/Android Crack Tool: unfinished.md
-    - 反编译:
-      - jadx: unfinished.md
-      - GDA: unfinished.md
-      - jeb: unfinished.md
-    - 调试:
-      - Android Studio 调试 Smali: unfinished.md
-      - IDA 调试 So: unfinished.md
-    - 脱壳工具:
-      - ZjDroid: unfinished.md
-    - 插桩: unfinished.md
-    - Hook:
-      - Xposed: unfinished.md
-      - Frida: unfinished.md
-  - Crypto:
-    - 核心工具:
-      - pycrypto: unfinished.md
-      - sage: unfinished.md
-    - 古典密码:
-      - JPK: unfinished.md
-    - 现代密码:
-      - RSA related: unfinished.md
-      - 整数分解, primefac, factordb, yafu: unfinished.md
-      - python 库, gmpy/gmpy2: unfinished.md
-      - openssl: unfinished.md
-  - 开源工具:
-    - fireeye/flare-vm: unfinished.md
-    - hasherezade/libopconv: unfinished.md
-  - ARM:
-    - VisUAL: unfinished.md
 
 
 # Theme
@@ -143,8 +62,6 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
