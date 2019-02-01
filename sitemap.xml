@@ -1,23 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>https://ctf-wiki.github.io/ctf-tools/binary_core_tools/instrumentation/intel_pin/</loc>
-     <lastmod>2018-12-04</lastmod>
+     <loc>https://ctf-wiki.github.io/ctf-tools/</loc>
+     <lastmod>2019-02-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://ctf-wiki.github.io/ctf-tools/binary_core_tools/virtualization/qemu/qemu-introduction/</loc>
-     <lastmod>2018-12-04</lastmod>
+     <loc>https://ctf-wiki.github.io/ctf-tools/collections/</loc>
+     <lastmod>2019-02-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://ctf-wiki.github.io/ctf-tools/binary_core_tools/virtualization/qemu/qemu-install-and-debug/</loc>
-     <lastmod>2018-12-04</lastmod>
+     <loc>https://ctf-wiki.github.io/ctf-tools/environment/</loc>
+     <lastmod>2019-02-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://ctf-wiki.github.io/ctf-tools/binary_core_tools/virtualization/qemu/qemu-internals/</loc>
-     <lastmod>2018-12-04</lastmod>
+     <loc>https://ctf-wiki.github.io/ctf-tools/misc/</loc>
+     <lastmod>2019-02-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://ctf-wiki.github.io/ctf-tools/crypto/</loc>
+     <lastmod>2019-02-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://ctf-wiki.github.io/ctf-tools/reverse/</loc>
+     <lastmod>2019-02-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://ctf-wiki.github.io/ctf-tools/pwn/</loc>
+     <lastmod>2019-02-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://ctf-wiki.github.io/ctf-tools/web/</loc>
+     <lastmod>2019-02-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://ctf-wiki.github.io/ctf-tools/papers/</loc>
+     <lastmod>2019-02-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
