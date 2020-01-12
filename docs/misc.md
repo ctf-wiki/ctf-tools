@@ -84,11 +84,7 @@
 
   > **Stegosaurus 仅支持 Python3.6 及其以下版本**
 
-  Stegosaurus 的基本用法：
-
-  ```shell
-  python3 stegosaurus.py -h
-  ```
+  Stegosaurus 的基本用法如下：
 
   ```shell
   $ python3 -m stegosaurus -h
@@ -108,4 +104,3 @@
     -x, --extract         Extract payload from carrier file
   ```
 
-  ![help](/home/python/%E6%A1%8C%E9%9D%A2/other/figure/help.png)
