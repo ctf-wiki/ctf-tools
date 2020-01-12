@@ -82,7 +82,7 @@
 
    Stegosaurus 是一款隐写工具，它允许我们在 Python 字节码文件( pyc 或 pyo )中嵌入任意 Payload 。由于编码密度较低，因此我们嵌入 Payload 的过程既不会改变源代码的运行行为，也不会改变源文件的文件大小。 Payload 代码会被分散嵌入到字节码之中，所以类似 strings 这样的代码工具无法查找到实际的 Payload 。 Python 的 dis 模块会返回源文件的字节码，然后我们就可以使用 Stegosaurus 来嵌入 Payload 了。
 
-  > **Stegosaurus 仅支持 Python3.6 及其以下版本**
+  > **Tips: Stegosaurus 仅支持 Python3.6 及其以下版本**
 
   Stegosaurus 的基本用法如下：
 
