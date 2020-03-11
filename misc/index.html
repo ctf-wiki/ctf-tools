@@ -560,6 +560,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pyc" class="md-nav__link">
+    pyc
+  </a>
+  
+</li>
+      
       
       
       
@@ -1787,6 +1794,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pyc" class="md-nav__link">
+    pyc
+  </a>
+  
+</li>
+      
       
       
       
@@ -1886,6 +1900,31 @@
 <ul>
 <li><a href="http://ezgif.com/split">GIF 在线分解</a></li>
 </ul>
+<h2 id="pyc">pyc<a class="headerlink" href="#pyc" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/AngelKitty/stegosaurus">Stegosaurus</a></li>
+</ul>
+<p>Stegosaurus 是一款隐写工具，它允许我们在 Python 字节码文件( pyc 或 pyo )中嵌入任意 Payload 。由于编码密度较低，因此我们嵌入 Payload 的过程既不会改变源代码的运行行为，也不会改变源文件的文件大小。 Payload 代码会被分散嵌入到字节码之中，所以类似 strings 这样的代码工具无法查找到实际的 Payload 。 Python 的 dis 模块会返回源文件的字节码，然后我们就可以使用 Stegosaurus 来嵌入 Payload 了。</p>
+<blockquote>
+<p><strong>Tips: Stegosaurus 仅支持 Python3.6 及其以下版本</strong></p>
+</blockquote>
+<p>Stegosaurus 的基本用法如下：</p>
+<div class="codehilite"><pre><span></span><code>$ python3 -m stegosaurus -h
+usage: stegosaurus.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-p PAYLOAD<span class="o">]</span> <span class="o">[</span>-r<span class="o">]</span> <span class="o">[</span>-s<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span> <span class="o">[</span>-x<span class="o">]</span> carrier
+
+positional arguments:
+  carrier               Carrier py, pyc or pyo file
+
+optional arguments:
+  -h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
+  -p PAYLOAD, --payload PAYLOAD
+                        Embed payload in carrier file
+  -r, --report          Report max available payload size carrier supports
+  -s, --side-by-side    Do not overwrite carrier file, install side by side
+                        instead.
+  -v, --verbose         Increase verbosity once per use
+  -x, --extract         Extract payload from carrier file
+</code></pre></div>
                 
                   
                 
