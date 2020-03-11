@@ -103,4 +103,3 @@
     -v, --verbose         Increase verbosity once per use
     -x, --extract         Extract payload from carrier file
   ```
-
