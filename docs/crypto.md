@@ -77,3 +77,4 @@
 
 - [Cisco 密码在线破解](http://www.ifm.net.nz/cookbooks/passwordcracker.html)
 - [Base64 加解密](http://base64.supfree.net/)
+- [Sage 计算机代数系统](http://www.sagemath.org/)
