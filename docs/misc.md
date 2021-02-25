@@ -76,6 +76,10 @@
 
 * [GIF 在线分解](http://ezgif.com/split)
 
+## 编码分析
+
+* [CyberChef 编码分析瑞士军刀](https://gchq.github.io/CyberChef)
+
 ## pyc
 
 - [Stegosaurus](https://github.com/AngelKitty/stegosaurus)
