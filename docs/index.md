@@ -13,7 +13,7 @@ CTF 军火库，收集 CTF 竞赛相关的工具、脚本和安全领域的会�
 - [Crypto 密码学](crypto.md)
 - [Reverse 逆向工程](reverse.md)
 - [Pwn 二进制漏洞挖掘](pwn.md)
-- [Web 网站应用](web.md)
+- [Web 网站应用](web-tools/web.md)
 - [Papers 安全相关会议 PPT、书籍](papers.md)
 
 由 [CTF Wiki](https://github.com/ctf-wiki/ctf-wiki/) 团队维护。

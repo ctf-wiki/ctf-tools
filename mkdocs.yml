@@ -100,8 +100,7 @@ theme:
   palette:
     primary: 'white'
     accent: 'red'
-  logo:
-    icon: 'gavel'
+  logo: '_static/img/favicon.png'
   favicon: '_static/img/favicon.png'
   feature:
     tabs: true
