@@ -2,10 +2,9 @@
 
 ## 反汇编
 
-* [IDA Pro 6.8 Green](http://down.52pojie.cn/Tools/Disassemblers/IDA_Pro_v6.8_and_Hex-Rays_Decompiler_%28ARM%2Cx64%2Cx86%29_Green.rar)
 * [dnSpy](http://down.40huo.cn/reverse/dnSpy%20v2.0.2.0.zip)
 * [ILSpy](http://down.40huo.cn/reverse/ILSpy_Master_2.3.1.1855_Binaries.zip)
-* [IDA Pro 7.0 Green](https://down.52pojie.cn/Tools/Disassemblers/IDA_Pro_v7.0_Portable.zip)
+* [IDA Pro 7.6](https://siasky.net/EAA0xjyLGDiCB6pv7TCahfKnDxmmsj-GNZ7-mhjokql9Zg)
 
 ## 调试
 
